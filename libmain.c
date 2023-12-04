@@ -5,8 +5,8 @@
 ** libmain
 */
 
-#include "headers/my.h"
-#include "headers/json_parser.h"
+#include "libsov/my.h"
+#include "libsov/json_parser.h"
 
 int main(void)
 {

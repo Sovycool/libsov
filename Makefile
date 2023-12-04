@@ -84,20 +84,18 @@ compil:		$(OBJS)
 	ar rc libsov.a $(OBJS)
 
 copy_lib:
-	cp libjson.a ../
+	cp libsov.a ../
 
 copy_h:
-	cp -r json_parser.h ../../include/
-	cp -r json_headers/ ../../include/
+	cp -r libsov/ ../../include/
 
 clean:
 	rm -f $(OBJS)
 
 fclean: 	clean
-	rm -f libjson.a
-	rm -f ../libjson.a
-	rm -f ../../include/json_parser.h
-	rm -rf ../../include/json_headers/
+	rm -f libsov.a
+	rm -f ../libsov.a
+	rm -rf ../../include/libsov/
 
 re:	fclean all
 

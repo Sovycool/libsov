@@ -5,7 +5,8 @@
 ** get_json_value
 */
 
-#include "../../headers/json_parser.h"
+#include "../../libsov/json_parser.h"
+#include "../../libsov/my.h"
 #include <stdlib.h>
 
 json_value_t *get_json_value(json_object_t *json, char *key)

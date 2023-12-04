@@ -5,7 +5,8 @@
 ** add_value_to_json
 */
 
-#include "../../headers/json_parser.h"
+#include "../../libsov/json_parser.h"
+#include "../../libsov/my.h"
 #include <stdlib.h>
 
 int sov_add_to_json(json_object_t *json, char *key,
