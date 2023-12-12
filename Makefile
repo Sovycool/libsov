@@ -70,34 +70,40 @@ SRCS =	my/my_compute_factorial_it.c	\
 		my/flags/my_percent.c			\
 		my/my_printf.c					\
 		\
+		linked_list/new_list.c			\
+		linked_list/add_to_list.c		\
+		linked_list/remove_from_list.c	\
+		linked_list/list_len.c			\
+		linked_list/sort_list.c			\
+		linked_list/list_to_array.c		\
+		linked_list/array_len.c			\
+		linked_list/array_n_dup.c		\
+		\
 		json_parser/object/new_json.c			\
 		json_parser/pair/new_json_pair.c		\
 		json_parser/value/new_json_value.c		\
 		json_parser/value/add_value_to_json.c	\
-		json_parser/value/get_json_value.c
+		json_parser/value/get_json_value.c		\
+		\
+		libmain.c
 
 OBJS =		$(SRCS:.c=.o)
 
-all: 		compil copy_lib copy_h
+NAME = 		libtest
 
-compil:		$(OBJS)
-	ar rc libsov.a $(OBJS)
+FLAGS= 		-Wall -Werror -Wextra
 
-copy_lib:
-	cp libsov.a ../
+LIBS =		\
 
-copy_h:
-	cp -r libsov/ ../../include/
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	gcc $(FLAGS) -o $(NAME) $(OBJS) -L. $(LIBS)
 
 clean:
 	rm -f $(OBJS)
 
-fclean: 	clean
-	rm -f libsov.a
-	rm -f ../libsov.a
-	rm -rf ../../include/libsov/
+fclean:	clean
+	rm -f $(NAME)
 
-re:	fclean all
-
-test:		compil
-	gcc libmain.c
+re:		fclean all

@@ -5,4 +5,4 @@
 ** extract_json
 */
 
-//extract a json structure from a .json file
+//extract a json structure from a string

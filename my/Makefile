@@ -72,24 +72,28 @@ SRCS =	my_compute_factorial_it.c	\
 
 OBJS =		$(SRCS:.c=.o)
 
+NAME =		libmy.a
+
+HEADER =	my.h
+
 all: 		compil copy_lib copy_h
 
 compil:		$(OBJS)
-	ar rc libmy.a $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 copy_lib:
-	cp libmy.a ../
+	cp $(NAME) ../
 
 copy_h:
 	mkdir -p ../../include
-	cp my.h ../../include/my.h
+	cp my.h ../../include/$(HEADER)
 
 clean:
 	rm -f $(OBJS)
 
 fclean: 	clean
-	rm -f libmy.a
-	rm -f ../libmy.a
-	rm -f ../../include/my.h
+	rm -f $(NAME)
+	rm -f ../$(NAME)
+	rm -f ../../include/$(HEADER)
 
 re:	fclean all

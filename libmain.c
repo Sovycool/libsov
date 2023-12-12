@@ -5,11 +5,12 @@
 ** libmain
 */
 
-#include "libsov/my.h"
-#include "libsov/json_parser.h"
+#include "my/my.h"
+#include "linked_list/linked_list.h"
+#include "json_parser/json_parser.h"
 
 int main(void)
 {
-    return 1;
+    return 0;
 }
 

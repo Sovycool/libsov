@@ -11,7 +11,7 @@
 int my_pointer(void *ptr)
 {
     int count = 2;
-    int address = (int)ptr;
+    int address = *(int *)ptr;
 
     my_putstr("0x");
     count += my_hexa_low(address);

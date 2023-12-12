@@ -5,7 +5,7 @@
 ** new_json_value
 */
 
-#include "../../libsov/json_parser.h"
+#include "../json_parser.h"
 #include <stdlib.h>
 
 json_value_t *new_json_value(
