@@ -11,9 +11,14 @@ Once you cloned the repository, you can either test the libs using the libmain.c
 If you want to use specific libs, you just need to copy the file corresponding to the lib you want and paste it in a lib folder in your project.  
 After that you only need to compile the lib before compiling your program and add the libx.a in the lib folder to your compiler.  
 
+If you need more details or look for help on how to use the libs, you can find guides [here](https://github.com/Sovycool/libsov/wiki/Guides).
+
 ## Libmy
 
-### What is it ?
-This lib contains basic functions in C that I need for my C projects, such as my_strlen to get the length of a string or my_printf which is my own version of the built-in printf.
+**What is it ?**  
+  
+This lib contains basic functions in C that I need for my C projects, such as my_strlen to get the length of a string or my_printf which is my own version of the built-in printf.  
+  
+Wiki page : <https://github.com/Sovycool/libsov/wiki/Libmy>
 ## Json Parser
 ## Linked List
