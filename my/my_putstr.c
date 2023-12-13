@@ -1,19 +1,13 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_putstr
+** libmy
 ** File description:
-** Displays all characters of a string one by one given the
-** adress of the first character
+** my_putstr
 */
 
 #include "my.h"
 
 int my_putstr(char const *str)
 {
-    int i = 0;
-
-    while (str[i] != '\0') {
-        my_putchar(str[i]);
-        i++;
-    }
+    return (str[0] == 0 ? 0 : my_putchar(str[0]) + my_putstr(str + 1));
 }

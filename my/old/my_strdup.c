@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2023
-** libmy
-** File description:
 ** my_strdup
+** File description:
+** Duplicates a string in a newly allocated string
 */
 
 #include "my.h"

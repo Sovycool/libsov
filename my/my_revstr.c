@@ -1,22 +1,19 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_revstr.c
+** libmy
 ** File description:
-** Reverse a string str
+** my_revstr
 */
 
 #include "my.h"
+#include <stdlib.h>
 
-char *my_revstr(char *str)
+char *my_revstr(char const *str)
 {
     int len = my_strlen(str);
-    int mid = (len % 2) + (len / 2);
-    char temp;
+    char *output = malloc(sizeof(char) * len);
 
-    for (int i = 0; i <= mid; i++) {
-        temp = str[i];
-        str[i] = str[len - i];
-        str[len - i - 1] = temp;
-    }
-    return str;
+    for (int i = 0; str[i] != 0; i++)
+        output[i] = str[len - i - 1];
+    return output;
 }

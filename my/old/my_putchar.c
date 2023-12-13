@@ -1,14 +1,13 @@
 /*
 ** EPITECH PROJECT, 2023
-** libmy
-** File description:
 ** my_putchar
+** File description:
+** Prints char c
 */
 
 #include <unistd.h>
 
-int my_putchar(char c)
+void my_putchar(char c)
 {
     write(1, &c, 1);
-    return 1;
 }

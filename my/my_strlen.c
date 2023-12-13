@@ -1,15 +1,11 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_strlen
+** libmy
 ** File description:
-** Returns length of an str
+** my_strlen
 */
 
-int my_strlen(const char *str)
+int my_strlen(char const *str)
 {
-    int i = 0;
-
-    while (str[i] != 0)
-        i++;
-    return i;
+    return (str[0] == 0 ? 0 : 1 + my_strlen(str + 1));
 }

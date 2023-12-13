@@ -1,21 +1,25 @@
 /*
 ** EPITECH PROJECT, 2023
-** my_strcat
+** libmy
 ** File description:
-** Concatenates src str on dest str
+** my_strcat
 */
 
-char *my_strcat(char *dest, char const *src)
-{
-    int i = 0;
-    int j = 0;
+#include "my.h"
+#include <stdlib.h>
 
-    while (dest[i] != 0)
-        i++;
-    while (src[j] != 0) {
-        dest[i + j] = src[j];
-        j++;
-    }
-    dest[i + j] = 0;
-    return dest;
+char *my_strcat(char *a, char *b)
+{
+    char *output;
+    int len_a = my_strlen(a);
+    int len_b = my_strlen(b);
+
+    output = malloc(sizeof(char) * ((len_a + len_b) + 1));
+    for (int i = 0; i < len_a + len_b; i++)
+        if (i < len_a)
+            output[i] = a[i];
+        else
+            output[i] = b[i - len_a];
+    output[len_a + len_b] = 0;
+    return output;
 }
