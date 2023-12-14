@@ -17,7 +17,7 @@ NAME =		libjson.a
 
 HEADER =	json_parser.h
 
-HEADERS =	json_header/
+HEADERS =	json_headers/
 
 all: 		compil copy_lib copy_h
 

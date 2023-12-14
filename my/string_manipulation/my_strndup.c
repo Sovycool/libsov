@@ -5,18 +5,17 @@
 ** my_strdup
 */
 
-#include "my.h"
+#include "../my.h"
 #include <stdlib.h>
 
-char *my_strdup(char const *src)
+char *my_strndup(char const *src, int n)
 {
     int i = 0;
     char *str;
-    int srclen;
+    int output_len = (my_strlen(src) < n ? my_strlen(src) : n);
 
-    srclen = my_strlen(src) + 1;
-    str = malloc(srclen + 1);
-    while (i < srclen) {
+    str = malloc(sizeof(char) * (output_len + 1));
+    while (i < output_len) {
         str[i] = src[i];
         i++;
     }

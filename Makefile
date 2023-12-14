@@ -5,20 +5,21 @@
 ## Makefile
 ##
 
-LIBMY =	my/my_putchar.c		\
-		my/my_putstr.c		\
-		my/my_putint.c		\
-		my/my_putfloat.c	\
+LIBMY =	my/printing_functions/my_putchar.c		\
+		my/printing_functions/my_putstr.c		\
+		my/printing_functions/my_putint.c		\
+		my/printing_functions/my_putfloat.c	\
 		\
-		my/my_strlen.c	\
-		my/my_revstr.c	\
-		my/my_strdup.c	\
-		my/my_strcat.c	\
+		my/string_control/my_strlen.c	\
 		\
-		my/my_abs.c			\
-		my/my_pow.c			\
-		my/my_int_to_base.c	\
-		my/my_base_to_int.c	\
+		my/string_manipulation/my_revstr.c	\
+		my/string_manipulation/my_strdup.c	\
+		my/string_manipulation/my_strcat.c	\
+		\
+		my/maths_functions/my_abs.c			\
+		my/maths_functions/my_pow.c			\
+		my/maths_functions/my_int_to_base.c	\
+		my/maths_functions/my_base_to_int.c	\
 
 JSON =	json_parser/object/new_json.c			\
 		json_parser/pair/new_json_pair.c		\
@@ -44,7 +45,7 @@ OBJS =		$(SRCS:.c=.o)
 
 NAME = 		libtest
 
-FLAGS= 		-Wall -Werror -Wextra
+FLAGS= 		-g -Wall -Werror -Wextra
 
 LIBS =		\
 

@@ -5,7 +5,8 @@
 ** my_int_to_base
 */
 
-#include "my.h"
+#include "../my.h"
+#include <stdlib.h>
 
 static char int_to_char(int nb)
 {
@@ -18,7 +19,7 @@ static int output_len(int nb, int base)
 {
     int i = 0;
 
-    while (nb < 0) {
+    while (nb > 0) {
         nb = nb / base;
         i++;
     }
@@ -27,11 +28,14 @@ static int output_len(int nb, int base)
 
 char *my_int_to_base(int nb, int base)
 {
-    char *output = malloc(sizeof(char) * output_len(nb, base));
+    int len = output_len(nb, base);
+    char *output = malloc(sizeof(char) * (len + 1));
 
-    for (int i = 0; nb > 0; i++) {
+    for (int i = 0; i < len; i++) {
         output[i] = int_to_char(nb % base);
         nb /= base;
     }
-    return my_revstr(output);
+    output[len] = 0;
+    my_revstr(output);
+    return output;
 }

@@ -30,7 +30,7 @@ copy_lib:
 
 copy_h:
 	mkdir -p ../../include
-	cp my.h ../../include/$(HEADER)
+	cp $(HEADER) ../../include/$(HEADER)
 
 clean:
 	rm -f $(OBJS)

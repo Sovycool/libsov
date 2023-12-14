@@ -5,7 +5,7 @@
 ** my_put_nbr
 */
 
-#include "my.h"
+#include "../my.h"
 
 static int my_put_nbr_rec(int nb)
 {

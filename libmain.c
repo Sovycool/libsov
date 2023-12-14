@@ -12,8 +12,8 @@
 
 int main(void)
 {
-    my_putstr(my_int_to_base(25, 8));
-    printf("\n%d\n", my_base_to_int("31", 8));
+    char str[] = "Hello world!";
+
+    printf("%d\n", my_base_to_int("31", 8));
     return 0;
 }
-

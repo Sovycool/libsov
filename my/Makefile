@@ -5,26 +5,29 @@
 ## ...
 ##
 
-SRCS =	my_putchar.c	\
-		my_putstr.c		\
-		my_putint.c		\
-		my_putfloat.c	\
+SRCS =	printing_functions/my_putchar.c		\
+		printing_functions/my_putstr.c		\
+		printing_functions/my_putint.c		\
+		printing_functions/my_putfloat.c	\
 		\
-		my_strlen.c	\
-		my_revstr.c	\
-		my_strdup.c	\
-		my_strcat.c	\
+		string_control/my_strlen.c	\
 		\
-		my_abs.c			\
-		my_pow.c			\
-		my_int_to_base.c	\
-		my_base_to_int.c	\
+		string_manipulation/my_revstr.c	\
+		string_manipulation/my_strdup.c	\
+		string_manipulation/my_strcat.c	\
+		\
+		maths_functions/my_abs.c			\
+		maths_functions/my_pow.c			\
+		maths_functions/my_int_to_base.c	\
+		maths_functions/my_base_to_int.c	\
 
 OBJS =		$(SRCS:.c=.o)
 
 NAME =		libmy.a
 
 HEADER =	my.h
+
+HEADERS =	my_headers/
 
 all: 		compil copy_lib copy_h
 
@@ -36,7 +39,8 @@ copy_lib:
 
 copy_h:
 	mkdir -p ../../include
-	cp my.h ../../include/$(HEADER)
+	cp $(HEADER) ../../include/$(HEADER)
+	cp $(HEADERS) ../../include/$(HEADERS)
 
 clean:
 	rm -f $(OBJS)
@@ -45,5 +49,6 @@ fclean: 	clean
 	rm -f $(NAME)
 	rm -f ../$(NAME)
 	rm -f ../../include/$(HEADER)
+	rm -f ../../include/$(HEADERS)
 
 re:	fclean all
