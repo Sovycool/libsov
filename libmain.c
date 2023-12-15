@@ -12,9 +12,9 @@
 
 int main(void)
 {
-    char i[] = "Hello planet";
-    char j[] = "world! WORLD!";
+    char i[] = "Hello world!";
+    char j[] = "Hello planet!";
 
-    printf("%d\n", my_atoi("11120322122"));
+    printf("%d\n", my_strcmp(i, j));
     return 0;
 }

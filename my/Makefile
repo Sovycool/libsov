@@ -10,11 +10,20 @@ SRCS =	printing_functions/my_putchar.c		\
 		printing_functions/my_putint.c		\
 		printing_functions/my_putfloat.c	\
 		\
-		string_control/my_strlen.c	\
+		string_control/my_is_digit.c			\
+		string_control/my_strlen.c				\
+		string_control/my_is_char_in_str.c		\
+		string_control/my_are_chars_in_str.c	\
+		string_control/my_is_str_in_str.c		\
+		string_control/my_strcmp.c				\
 		\
-		string_manipulation/my_revstr.c	\
-		string_manipulation/my_strdup.c	\
-		string_manipulation/my_strcat.c	\
+		string_manipulation/my_revstr.c		\
+		string_manipulation/my_strdup.c		\
+		string_manipulation/my_strndup.c	\
+		string_manipulation/my_strcat.c		\
+		string_manipulation/my_strncat.c	\
+		string_manipulation/my_atoi.c		\
+		string_manipulation/my_atof.c		\
 		\
 		maths_functions/my_abs.c			\
 		maths_functions/my_pow.c			\
