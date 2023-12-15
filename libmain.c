@@ -12,8 +12,8 @@
 
 int main(void)
 {
-    char str[] = "Hello world!";
-
-    printf("%d\n", my_base_to_int("31", 8));
+    char i[] = "Hello planet";
+    char j[] = "world! WORLD!";
+    printf("%d\n", my_atoi("Hello world"));
     return 0;
 }

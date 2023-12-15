@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2023
 ** libmy
 ** File description:
-** my_put_nbr
+** my_putint
 */
 
 #include "../my.h"

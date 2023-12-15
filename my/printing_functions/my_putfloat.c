@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2023
 ** libmy
 ** File description:
-** my_printf
+** my_putfloat
 */
 
 #include "../my.h"

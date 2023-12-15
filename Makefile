@@ -8,13 +8,21 @@
 LIBMY =	my/printing_functions/my_putchar.c		\
 		my/printing_functions/my_putstr.c		\
 		my/printing_functions/my_putint.c		\
-		my/printing_functions/my_putfloat.c	\
+		my/printing_functions/my_putfloat.c		\
 		\
-		my/string_control/my_strlen.c	\
+		my/string_control/my_is_digit.c			\
+		my/string_control/my_strlen.c			\
+		my/string_control/my_is_char_in_str.c	\
+		my/string_control/my_are_chars_in_str.c	\
+		my/string_control/my_is_str_in_str.c	\
 		\
 		my/string_manipulation/my_revstr.c	\
 		my/string_manipulation/my_strdup.c	\
+		my/string_manipulation/my_strndup.c	\
 		my/string_manipulation/my_strcat.c	\
+		my/string_manipulation/my_strncat.c	\
+		my/string_manipulation/my_atoi.c	\
+		my/string_manipulation/my_atof.c	\
 		\
 		my/maths_functions/my_abs.c			\
 		my/maths_functions/my_pow.c			\
