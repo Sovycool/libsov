@@ -35,7 +35,8 @@ char *my_strndup(char const *str, int n);
 */
 char *my_strcat(char *a, char *b);
 /*!
-** @brief Concatenate `n` first characters of a string with `m` first characters of another string.
+** @brief Concatenate `n` first characters of a string with
+** `m` first characters of another string.
 ** @param a The first string.
 ** @param b The second string.
 ** @param n How many characters of the first string you want to concatenate.
@@ -46,13 +47,15 @@ char *my_strncat(char *a, char *b, int n, int m);
 /*!
 ** @brief Converts `str` into an integer.
 ** @param str The string containing your integer.
-** @return The integer corresponding to your string, `0` by default when no digit can be found.
+** @return The integer corresponding to your string,
+** `0` by default when no digit can be found.
 */
 int my_atoi(char *str);
 /*!
 ** @brief Converts `str` into a float.
 ** @param str The string containing your float.
-** @return The float corresponding to your string as a `double`, `0` by default when no digit can be found.
+** @return The float corresponding to your string as a `double`,
+** `0` by default when no digit can be found.
 */
 double my_atof(char *str);
 

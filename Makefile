@@ -47,7 +47,7 @@ LL =	linked_list/new_list.c			\
 SRCS =	libmain.c	\
 		$(LIBMY)	\
 		$(LL)		\
-		#$(JSON)		\
+		//$(JSON)		\
 
 OBJS =		$(SRCS:.c=.o)
 

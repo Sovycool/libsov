@@ -14,6 +14,7 @@ int main(void)
 {
     char i[] = "Hello planet";
     char j[] = "world! WORLD!";
-    printf("%d\n", my_atoi("Hello world"));
+
+    printf("%d\n", my_atoi("11120322122"));
     return 0;
 }
