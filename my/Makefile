@@ -8,7 +8,10 @@
 SRCS =	printing_functions/my_putchar.c		\
 		printing_functions/my_putstr.c		\
 		printing_functions/my_putint.c		\
+		printing_functions/my_printint.c	\
 		printing_functions/my_putfloat.c	\
+		printing_functions/my_printfloat.c	\
+		printing_functions/my_printf.c		\
 		\
 		string_control/my_is_digit.c			\
 		string_control/my_strlen.c				\

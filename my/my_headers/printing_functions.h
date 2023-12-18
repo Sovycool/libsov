@@ -27,12 +27,25 @@ int my_putstr(char const *str);
 */
 int my_putint(int nb);
 /*!
+** @brief Advanced version of `my_putint`.
+** @param nb The integer you want to print.
+** @param precision The precision of your integer.
+** @return The number of character printed.
+*/
+int my_printint(int nb, int precision);
+/*!
 ** @brief Prints the given float `nb`.
+** @param nb The float you want to print.
+** @return The number of character printed.
+*/
+int my_putfloat(double nb);
+/*!
+** @brief Advanced version of `my_putfloat`.
 ** @param nb The float you want to print.
 ** @param precision The precision of your float.
 ** @return The number of character printed.
 */
-int my_putfloat(double nb, int precision);
+int my_printfloat(double nb, int precision);
 /*!
 ** @brief Prints the given string. You can add `%[flag]` to display values.
 ** @param str The string you want to print.

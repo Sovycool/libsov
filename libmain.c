@@ -13,9 +13,6 @@
 
 int main(void)
 {
-    char i[] = "Hello world!";
-    char j[] = "Hello planet!";
-
-    my_printf("Hello %d %c %s %.0f world!\n", 50, 48, "my dear", 125.125);
+    
     return 0;
 }

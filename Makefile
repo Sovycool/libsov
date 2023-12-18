@@ -8,7 +8,9 @@
 LIBMY =	my/printing_functions/my_putchar.c		\
 		my/printing_functions/my_putstr.c		\
 		my/printing_functions/my_putint.c		\
+		my/printing_functions/my_printint.c		\
 		my/printing_functions/my_putfloat.c		\
+		my/printing_functions/my_printfloat.c	\
 		my/printing_functions/my_printf.c		\
 		\
 		my/string_control/my_is_digit.c			\
@@ -49,7 +51,7 @@ LL =	linked_list/new_list.c			\
 SRCS =	libmain.c	\
 		$(LIBMY)	\
 		$(LL)		\
-		#$(JSON)		\
+		$(JSON)		\
 
 OBJS =		$(SRCS:.c=.o)
 

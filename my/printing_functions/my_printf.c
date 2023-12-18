@@ -46,13 +46,15 @@ static int print_flag(flag_t *flag, va_list args)
         case 'c':
             return my_putchar(va_arg(args, int));
         case 'd':
-            return my_putint(va_arg(args, int));
+            if (flag->precision == NULL)
+                return my_putint(va_arg(args, int));
+            return my_printint(va_arg(args, int), *flag->precision);
         case 's':
             return my_putstr(va_arg(args, char *));
         case 'f':
             if (flag->precision == NULL)
-                return my_putfloat(va_arg(args, double), 6);
-            return my_putfloat(va_arg(args, double), *flag->precision);
+                return my_putfloat(va_arg(args, double));
+            return my_printfloat(va_arg(args, double), *flag->precision);
         default:
             break;
     }
