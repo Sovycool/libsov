@@ -9,6 +9,7 @@ LIBMY =	my/printing_functions/my_putchar.c		\
 		my/printing_functions/my_putstr.c		\
 		my/printing_functions/my_putint.c		\
 		my/printing_functions/my_putfloat.c		\
+		my/printing_functions/my_printf.c		\
 		\
 		my/string_control/my_is_digit.c			\
 		my/string_control/my_strlen.c			\

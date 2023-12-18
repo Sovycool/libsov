@@ -17,7 +17,7 @@ int my_putfloat(double nb, int precision)
         count += my_putchar('-');
         nb = my_abs(nb);
     }
-    nb += 0.5 / precision_multiplier;
+    nb += 0.6 / precision_multiplier;
     count += my_putint(nb);
     if (precision != 0) {
         count += my_putchar('.');

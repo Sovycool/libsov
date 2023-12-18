@@ -33,5 +33,6 @@ int my_putint(int nb);
 ** @return The number of character printed.
 */
 int my_putfloat(double nb, int precision);
+int my_printf(char *str, ...);
 
 #endif /* !PRINTING_FUNCTIONS_H_ */
