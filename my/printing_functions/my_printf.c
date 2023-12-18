@@ -41,6 +41,8 @@ static flag_t *process_flag(char *str, int *idx, flag_t *flag)
 static int print_flag(flag_t *flag, va_list args)
 {
     switch (flag->specifier) {
+        case '%':
+            return my_putchar('%');
         case 'c':
             return my_putchar(va_arg(args, int));
         case 'd':

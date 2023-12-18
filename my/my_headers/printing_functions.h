@@ -33,6 +33,12 @@ int my_putint(int nb);
 ** @return The number of character printed.
 */
 int my_putfloat(double nb, int precision);
+/*!
+** @brief Prints the given string. You can add `%[flag]` to display values.
+** @param str The string you want to print.
+** @param ... List of values corresponding to the flags int `str`.
+** @return The number of character printed.
+*/
 int my_printf(char *str, ...);
 
 #endif /* !PRINTING_FUNCTIONS_H_ */
