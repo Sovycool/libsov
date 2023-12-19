@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** organized
+** linked_list
 ** File description:
 ** array_n_dup
 */

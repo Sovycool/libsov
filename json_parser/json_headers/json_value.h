@@ -27,7 +27,7 @@ json_value_t *new_json_value(void *value, json_value_type_t type);
 ** @param type Type of value.
 ** @return Returns 1 on sucess, 0 on fail.
 */
-int add_value_to_json(
+int add_to_json(
     json_object_t *json, char *key, void *value, json_value_type_t type);
 
 /*!

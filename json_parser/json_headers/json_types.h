@@ -12,8 +12,7 @@
 
 typedef enum json_value_type json_value_type_t;
 typedef struct json_object json_object_t;
-typedef struct json_value json_value_t;
-typedef struct json_array json_array_t;
 typedef struct json_pair json_pair_t;
+typedef struct json_value json_value_t;
 
 #endif /* !JSON_TYPES_H_ */

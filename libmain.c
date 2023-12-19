@@ -13,6 +13,14 @@
 
 int main(void)
 {
-    
+    json_object_t *json = new_json();
+
+    add_to_json(json, "name", "Sovann", STRING);
+    display_json(json);
+    add_to_json(json, "wife", "Alex", STRING);
+    display_json(json);
+    add_to_json(json, "age", (void *)18, INT);
+    display_json(json);
+    destroy_json(json);
     return 0;
 }

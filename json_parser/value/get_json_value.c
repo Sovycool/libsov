@@ -11,13 +11,15 @@
 
 json_value_t *get_json_value(json_object_t *json, char *key)
 {
-    json_pair_t **pair = &json->pairs;
+    linked_list_t *pairs = json->pairs;
+    json_pair_t *pair;
+    int nb_pairs = list_len(pairs);
 
-    while (*(pair) != NULL) {
-        my_printf("%s\n", (*pair)->key);
-        if (my_strcmp((*pair)->key, key) == 0)
-            return (*pair)->value;
-        pair = &(*pair)->next;
+    for (int i = 0; i < nb_pairs; i++) {
+        if (my_strcmp(pair->key, key) == 0)
+            return pair->value;
+        free(pair);
+        pair = (json_pair_t *)get_list_at_index(pairs, i)->data;
     }
     return NULL;
 }

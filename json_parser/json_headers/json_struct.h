@@ -9,42 +9,37 @@
     #define JSON_STRUCT_H_
 
     #include "json_types.h"
+    #include "../../linked_list/linked_list.h"
 
-typedef enum json_value_type {
+enum json_value_type {
     STRING,
     INT,
     DOUBLE,
     OBJECT,
     ARRAY,
     VOID
-} json_value_type_t;
+};
 
-typedef struct json_value {
-    json_value_type_t type;
+struct json_value {
+    enum json_value_type type;
     union value {
         char *str_;
         int int_;
         double double_;
         struct json_object *object_;
-        struct json_array *array_;
+        linked_list_t *array_;
         void *void_;
     } value;
-} json_value_t;
+};
 
-typedef struct json_array {
-    struct json_value *value;
-    struct json_array *next;
-} json_array_t;
-
-typedef struct json_pair {
+struct json_pair {
     char *key;
     struct json_value *value;
-    struct json_pair *next;
-} json_pair_t;
+};
 
-typedef struct json_object {
-    struct json_pair *pairs;
-} json_object_t;
+struct json_object {
+    linked_list_t *pairs;
+};
 
 
 #endif /* !JSON_STRUCT_H_ */

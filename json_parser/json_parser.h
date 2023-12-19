@@ -12,5 +12,7 @@
     #include "json_headers/json_object.h"
     #include "json_headers/json_pair.h"
     #include "json_headers/json_value.h"
+    #include "json_headers/json_display.h"
+    #include "json_headers/json_destroy.h"
 
 #endif /* !JSON_PARSER_H_ */

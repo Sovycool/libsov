@@ -14,6 +14,5 @@ json_pair_t *new_json_pair(void)
 
     new_pair->key = NULL;
     new_pair->value = NULL;
-    new_pair->next = NULL;
     return new_pair;
 }

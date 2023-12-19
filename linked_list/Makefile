@@ -10,6 +10,7 @@ SRCS =	new_list.c			\
 		remove_from_list.c	\
 		list_len.c			\
 		sort_list.c			\
+		get_list_at_index.c	\
 		list_to_array.c		\
 		array_len.c			\
 		array_n_dup.c

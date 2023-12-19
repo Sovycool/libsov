@@ -36,14 +36,22 @@ LIBMY =	my/printing_functions/my_putchar.c		\
 JSON =	json_parser/object/new_json.c			\
 		json_parser/pair/new_json_pair.c		\
 		json_parser/value/new_json_value.c		\
-		json_parser/value/add_value_to_json.c	\
+		json_parser/value/add_to_json.c			\
 		json_parser/value/get_json_value.c		\
+		json_parser/destroy/destroy_json.c		\
+		json_parser/destroy/destroy_pair.c		\
+		json_parser/display/display_json.c		\
+		json_parser/display/display_pairs.c		\
+		json_parser/display/display_pair.c		\
 
 LL =	linked_list/new_list.c			\
 		linked_list/add_to_list.c		\
+		linked_list/add_to_stack.c		\
 		linked_list/remove_from_list.c	\
+		linked_list/destroy_list.c		\
 		linked_list/list_len.c			\
 		linked_list/sort_list.c			\
+		linked_list/get_list_at_index.c	\
 		linked_list/list_to_array.c		\
 		linked_list/array_len.c			\
 		linked_list/array_n_dup.c		\
