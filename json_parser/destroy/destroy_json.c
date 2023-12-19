@@ -10,8 +10,11 @@
 
 void destroy_json(json_object_t *json)
 {
-    linked_list_t *pair = json->pairs;
+    linked_list_t *pair;
 
+    if (json->pairs == NULL)
+        return;
+    pair = json->pairs;
     while (pair->data != NULL) {
         destroy_pair((json_pair_t *)pair->data);
         pair = pair->next;

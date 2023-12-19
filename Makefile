@@ -40,6 +40,8 @@ JSON =	json_parser/object/new_json.c			\
 		json_parser/value/get_json_value.c		\
 		json_parser/destroy/destroy_json.c		\
 		json_parser/destroy/destroy_pair.c		\
+		json_parser/destroy/destroy_value.c		\
+		json_parser/destroy/destroy_array.c		\
 		json_parser/display/display_json.c		\
 		json_parser/display/display_object.c	\
 		json_parser/display/display_pairs.c		\

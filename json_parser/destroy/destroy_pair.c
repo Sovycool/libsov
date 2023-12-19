@@ -10,12 +10,8 @@
 
 void destroy_pair(json_pair_t *pair)
 {
-    switch (pair->value->type) {
-        case OBJECT :
-            destroy_json(pair->value->value.object_);
-        default:
-            free(pair->value);
-            free(pair);
-            break;
-    }
+    if (pair == NULL)
+        return;
+    destroy_value(pair->value);
+    free(pair);
 }

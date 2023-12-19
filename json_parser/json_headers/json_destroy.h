@@ -12,5 +12,7 @@
 
 void destroy_json(json_object_t *json);
 void destroy_pair(json_pair_t *pair);
+void destroy_value(json_value_t *value);
+void destroy_array(linked_list_t *list);
 
 #endif /* !JSON_DESTROY_H_ */

@@ -16,11 +16,13 @@ int main(void)
     json_object_t *me = new_json();
     json_object_t *wife = new_json();
     json_object_t *pet = new_json();
+    json_object_t *extra = new_json();
     linked_list_t *list = new_list();
     double flt = 3.14;
 
     add_to_list(list, new_json_value("Hello world", STRING));
-    add_to_list(list, new_json_value(pet, OBJECT));
+    add_to_list(list, new_json_value(extra, OBJECT));
+    add_to_json(extra, "message", "Cheh grosse merde", STRING);
     add_to_json(pet, "name", "Milou", STRING);
     add_to_json(wife, "name", "Alex", STRING);
     add_to_json(wife, "pet", pet, OBJECT);
