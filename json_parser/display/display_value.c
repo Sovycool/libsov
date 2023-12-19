@@ -18,10 +18,13 @@ void display_value(json_value_t *value, int tab)
             my_putint(value->value.int_);
             break;
         case DOUBLE :
-            my_putfloat(value->value.double_);
+            my_putfloat(*value->value.double_);
             break;
         case OBJECT :
             display_object(value->value.object_, tab + 1);
+            break;
+        case ARRAY :
+            display_array(value->value.array_, tab + 1);
             break;
     }
 }

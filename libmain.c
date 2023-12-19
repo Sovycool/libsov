@@ -17,14 +17,17 @@ int main(void)
     json_object_t *wife = new_json();
     json_object_t *pet = new_json();
     linked_list_t *list = new_list();
+    double flt = 3.14;
 
     add_to_list(list, new_json_value("Hello world", STRING));
+    add_to_list(list, new_json_value(pet, OBJECT));
     add_to_json(pet, "name", "Milou", STRING);
     add_to_json(wife, "name", "Alex", STRING);
     add_to_json(wife, "pet", pet, OBJECT);
     add_to_json(me, "name", "Sovann", STRING);
     add_to_json(me, "wife", wife, OBJECT);
     add_to_json(me, "age", (void *)18, INT);
+    add_to_json(me, "gpa", &flt, DOUBLE);
     add_to_json(me, "extra", list, ARRAY);
     display_json(me);
     destroy_json(me);

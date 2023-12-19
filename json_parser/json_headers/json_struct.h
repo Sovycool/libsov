@@ -25,7 +25,7 @@ struct json_value {
     union value {
         char *str_;
         int int_;
-        double double_;
+        double *double_;
         struct json_object *object_;
         linked_list_t *array_;
         void *void_;
