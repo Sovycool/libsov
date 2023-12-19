@@ -8,15 +8,8 @@
 #include "../json_parser.h"
 #include "../../my/my.h"
 
-void display_pair(json_pair_t *pair)
+void display_pair(json_pair_t *pair, int tab)
 {
     my_printf("\"%s\" : ", pair->key);
-    switch (pair->value->type) {
-        case STRING :
-            my_printf("\"%s\"", pair->value->value.str_);
-            break;
-        case INT :
-            my_printf("%d", pair->value->value.int_);
-            break;
-    }
+    display_value(pair->value, tab);
 }

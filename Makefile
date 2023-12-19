@@ -41,8 +41,10 @@ JSON =	json_parser/object/new_json.c			\
 		json_parser/destroy/destroy_json.c		\
 		json_parser/destroy/destroy_pair.c		\
 		json_parser/display/display_json.c		\
+		json_parser/display/display_object.c	\
 		json_parser/display/display_pairs.c		\
 		json_parser/display/display_pair.c		\
+		json_parser/display/display_value.c		\
 
 LL =	linked_list/new_list.c			\
 		linked_list/add_to_list.c		\

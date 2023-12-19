@@ -13,14 +13,20 @@
 
 int main(void)
 {
-    json_object_t *json = new_json();
+    json_object_t *me = new_json();
+    json_object_t *wife = new_json();
+    json_object_t *pet = new_json();
+    linked_list_t *list = new_list();
 
-    add_to_json(json, "name", "Sovann", STRING);
-    display_json(json);
-    add_to_json(json, "wife", "Alex", STRING);
-    display_json(json);
-    add_to_json(json, "age", (void *)18, INT);
-    display_json(json);
-    destroy_json(json);
+    add_to_list(list, new_json_value("Hello world", STRING));
+    add_to_json(pet, "name", "Milou", STRING);
+    add_to_json(wife, "name", "Alex", STRING);
+    add_to_json(wife, "pet", pet, OBJECT);
+    add_to_json(me, "name", "Sovann", STRING);
+    add_to_json(me, "wife", wife, OBJECT);
+    add_to_json(me, "age", (void *)18, INT);
+    add_to_json(me, "extra", list, ARRAY);
+    display_json(me);
+    destroy_json(me);
     return 0;
 }
