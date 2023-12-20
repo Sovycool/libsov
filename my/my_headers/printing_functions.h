@@ -53,5 +53,12 @@ int my_printfloat(double nb, int precision);
 ** @return The number of character printed.
 */
 int my_printf(char *str, ...);
+/*!
+** @brief Prints the given string array.
+** @param tab The array you want to print.
+** @param delimiter The string you want to print to delimit each word.
+** @return The number of character printed.
+*/
+int my_show_word_array(char *const *tab, char const *delimiter);
 
 #endif /* !PRINTING_FUNCTIONS_H_ */

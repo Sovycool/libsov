@@ -10,28 +10,17 @@
 #include "json_parser/json_parser.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/stat.h>
 
 int main(void)
 {
-    json_object_t *me = new_json();
-    json_object_t *wife = new_json();
-    json_object_t *pet = new_json();
-    json_object_t *extra = new_json();
-    linked_list_t *list = new_list();
-    double flt = 3.14;
+    char str[] = "Hello world";
+    char **arr = my_str_to_word_array(str, " ");
+    char *new_str = my_word_array_to_str(arr, ", ");
 
-    add_to_list(list, new_json_value("Hello world", STRING));
-    add_to_list(list, new_json_value(extra, OBJECT));
-    add_to_json(extra, "message", "Cheh grosse merde", STRING);
-    add_to_json(pet, "name", "Milou", STRING);
-    add_to_json(wife, "name", "Alex", STRING);
-    add_to_json(wife, "pet", pet, OBJECT);
-    add_to_json(me, "name", "Sovann", STRING);
-    add_to_json(me, "wife", wife, OBJECT);
-    add_to_json(me, "age", (void *)18, INT);
-    add_to_json(me, "gpa", &flt, DOUBLE);
-    add_to_json(me, "extra", list, ARRAY);
-    display_json(me);
-    destroy_json(me);
+    my_show_word_array(arr, "\n");
+    my_printf("%s\n", new_str);
+    my_free_word_array(arr);
+    free(new_str);
     return 0;
 }

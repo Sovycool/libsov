@@ -58,5 +58,27 @@ int my_atoi(char *str);
 ** `0` by default when no digit can be found.
 */
 double my_atof(char *str);
+/*!
+** @brief Cuts down `str` into a `char **`.
+** @param str The string you want to cut down.
+** @param delimiter The list of characters you want to use to delimit words.
+** @return An array containing all words in your string.
+*/
+char **my_str_to_word_array(char *str, char *delimiter);
+/*!
+** @brief Concatenate `tab` into a `char *`.
+** @param tab The word array you want to concatenate.
+** @param delimiter The list of characters you want to use to delimit words.
+** @return An array containing all words in your string.
+*/
+char *my_word_array_to_str(char **tab, char *delimiter);
+/*!
+** @brief Concatenate `n` words in `tab` into a `char *`.
+** @param tab The word array you want to concatenate.
+** @param delimiter The list of characters you want to use to delimit words.
+** @param n How many words you want to concatenate.
+** @return An array containing all words in your string.
+*/
+char *my_n_word_array_to_str(char **tab, char *delimiter);
 
 #endif /* !STRING_MANIPULATION_H_ */

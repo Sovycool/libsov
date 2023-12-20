@@ -5,13 +5,14 @@
 ## Makefile
 ##
 
-LIBMY =	my/printing_functions/my_putchar.c		\
-		my/printing_functions/my_putstr.c		\
-		my/printing_functions/my_putint.c		\
-		my/printing_functions/my_printint.c		\
-		my/printing_functions/my_putfloat.c		\
-		my/printing_functions/my_printfloat.c	\
-		my/printing_functions/my_printf.c		\
+LIBMY =	my/printing_functions/my_putchar.c			\
+		my/printing_functions/my_putstr.c			\
+		my/printing_functions/my_putint.c			\
+		my/printing_functions/my_printint.c			\
+		my/printing_functions/my_putfloat.c			\
+		my/printing_functions/my_printfloat.c		\
+		my/printing_functions/my_printf.c			\
+		my/printing_functions/my_show_word_array.c	\
 		\
 		my/string_control/my_is_digit.c			\
 		my/string_control/my_strlen.c			\
@@ -20,18 +21,22 @@ LIBMY =	my/printing_functions/my_putchar.c		\
 		my/string_control/my_is_str_in_str.c	\
 		my/string_control/my_strcmp.c			\
 		\
-		my/string_manipulation/my_revstr.c	\
-		my/string_manipulation/my_strdup.c	\
-		my/string_manipulation/my_strndup.c	\
-		my/string_manipulation/my_strcat.c	\
-		my/string_manipulation/my_strncat.c	\
-		my/string_manipulation/my_atoi.c	\
-		my/string_manipulation/my_atof.c	\
+		my/string_manipulation/my_revstr.c				\
+		my/string_manipulation/my_strdup.c				\
+		my/string_manipulation/my_strndup.c				\
+		my/string_manipulation/my_strcat.c				\
+		my/string_manipulation/my_strncat.c				\
+		my/string_manipulation/my_atoi.c				\
+		my/string_manipulation/my_atof.c				\
+		my/string_manipulation/my_str_to_word_array.c	\
+		my/string_manipulation/my_word_array_to_str.c	\
 		\
 		my/maths_functions/my_abs.c			\
 		my/maths_functions/my_pow.c			\
 		my/maths_functions/my_int_to_base.c	\
 		my/maths_functions/my_base_to_int.c	\
+		\
+		my/freeing_functions/my_free_word_array.c	\
 
 JSON =	json_parser/object/new_json.c			\
 		json_parser/pair/new_json_pair.c		\
@@ -96,3 +101,10 @@ fclean:	clean
 	rm -f $(NAME)
 
 re:		fclean all
+
+valgrind:	re
+	valgrind -s --leak-check=full --track-origins=yes ./libtest
+
+style:	fclean
+	coding-style . .
+	cat coding-style-reports.log
