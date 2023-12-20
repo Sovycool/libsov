@@ -66,10 +66,13 @@ LL =	linked_list/new_list.c			\
 		linked_list/array_len.c			\
 		linked_list/array_n_dup.c		\
 
+FMAN =	file_manipulation/fman_get_file.c	\
+
 SRCS =	libmain.c	\
 		$(LIBMY)	\
 		$(LL)		\
 		$(JSON)		\
+		$(FMAN)		\
 
 OBJS =		$(SRCS:.c=.o)
 
