@@ -5,11 +5,7 @@
 ## ...
 ##
 
-SRCS =	object/new_json.c			\
-		pair/new_json_pair.c		\
-		value/new_json_value.c		\
-		value/add_value_to_json.c	\
-		value/get_json_value.c
+SRCS =		\
 
 OBJS =		$(SRCS:.c=.o)
 

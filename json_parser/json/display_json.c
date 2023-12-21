@@ -9,5 +9,5 @@
 
 void display_json(json_object_t *json)
 {
-    display_object(json, 0);
+    display_json_object(json, 0);
 }

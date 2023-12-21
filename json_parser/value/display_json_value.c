@@ -2,13 +2,13 @@
 ** EPITECH PROJECT, 2023
 ** json_parser
 ** File description:
-** display_value
+** display_json_value
 */
 
 #include "../json_parser.h"
 #include "../../my/my.h"
 
-void display_value(json_value_t *value, int tab)
+void display_json_value(json_value_t *value, int tab)
 {
     switch (value->type) {
         case STRING :
@@ -21,10 +21,10 @@ void display_value(json_value_t *value, int tab)
             my_putfloat(*value->value.double_);
             break;
         case OBJECT :
-            display_object(value->value.object_, tab + 1);
+            display_json_object(value->value.object_, tab + 1);
             break;
         case ARRAY :
-            display_array(value->value.array_, tab + 1);
+            display_json_array(value->value.array_, tab + 1);
             break;
     }
 }

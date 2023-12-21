@@ -2,13 +2,13 @@
 ** EPITECH PROJECT, 2023
 ** json_parser
 ** File description:
-** destroy_json
+** destroy_json_object
 */
 
 #include "../json_parser.h"
 #include <stdlib.h>
 
-void destroy_json(json_object_t *json)
+void destroy_json_object(json_object_t *json)
 {
     linked_list_t *pair;
 
@@ -16,7 +16,7 @@ void destroy_json(json_object_t *json)
         return;
     pair = json->pairs;
     while (pair->data != NULL) {
-        destroy_pair((json_pair_t *)pair->data);
+        destroy_json_pair((json_pair_t *)pair->data);
         pair = pair->next;
     }
     destroy_list(json->pairs);

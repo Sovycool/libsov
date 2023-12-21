@@ -11,8 +11,5 @@
 
 json_object_t *new_json(void)
 {
-    json_object_t *json = malloc(sizeof(json_object_t));
-
-    json->pairs = new_list();
-    return json;
+    return new_json_object();
 }

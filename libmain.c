@@ -18,7 +18,7 @@ int main(void)
 {
     char *str = fman_get_file("test.json");
 
-    my_printf("%s\n", str);
+    extract_json(str);
     free(str);
     return 0;
 }

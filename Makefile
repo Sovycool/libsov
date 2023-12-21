@@ -38,21 +38,28 @@ LIBMY =	my/printing_functions/my_putchar.c			\
 		\
 		my/freeing_functions/my_free_word_array.c	\
 
-JSON =	json_parser/object/new_json.c			\
+JSON =	json_parser/json/new_json.c			\
+		json_parser/json/destroy_json.c		\
+		json_parser/json/display_json.c		\
+		json_parser/json/add_to_json.c		\
+		json_parser/json/get_json_value.c	\
+		json_parser/json/extract_json.c		\
+		\
+		json_parser/object/new_json_object.c		\
+		json_parser/object/destroy_json_object.c	\
+		json_parser/object/display_json_object.c	\
+		\
 		json_parser/pair/new_json_pair.c		\
+		json_parser/pair/destroy_json_pair.c	\
+		json_parser/pair/display_json_pair.c	\
+		json_parser/pair/display_json_pairs.c	\
+		\
 		json_parser/value/new_json_value.c		\
-		json_parser/value/add_to_json.c			\
-		json_parser/value/get_json_value.c		\
-		json_parser/destroy/destroy_json.c		\
-		json_parser/destroy/destroy_pair.c		\
-		json_parser/destroy/destroy_value.c		\
-		json_parser/destroy/destroy_array.c		\
-		json_parser/display/display_json.c		\
-		json_parser/display/display_object.c	\
-		json_parser/display/display_pairs.c		\
-		json_parser/display/display_pair.c		\
-		json_parser/display/display_value.c		\
-		json_parser/display/display_array.c		\
+		json_parser/value/destroy_json_value.c	\
+		json_parser/value/display_json_value.c	\
+		\
+		json_parser/array/destroy_json_array.c	\
+		json_parser/array/display_json_array.c	\
 
 LL =	linked_list/new_list.c			\
 		linked_list/add_to_list.c		\

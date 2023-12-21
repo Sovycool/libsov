@@ -2,28 +2,24 @@
 ** EPITECH PROJECT, 2023
 ** json_parser
 ** File description:
-** display_array
+** display_json_pairs
 */
 
 #include "../json_parser.h"
 #include "../../my/my.h"
 
-void display_array(linked_list_t *array, int tab)
+void display_json_pairs(linked_list_t *pairs, int tab)
 {
-    linked_list_t *value = array;
-    int nb_pairs = list_len(array);
+    linked_list_t *pair = pairs;
+    int nb_pairs = list_len(pairs);
 
-    my_printf("[\n");
     for (int i = 0; i < nb_pairs; i++) {
         for (int i = 0; i < tab + 1; i++)
             my_putchar('\t');
-        display_value((json_value_t *)value->data, tab);
+        display_json_pair((json_pair_t *)pair->data, tab);
         if (i + 1 < nb_pairs)
             my_printf(",\n");
-        value = value->next;
+        pair = pair->next;
     }
     my_putchar('\n');
-    for (int i = 0; i < tab; i++)
-        my_putchar('\t');
-    my_printf("]");
 }

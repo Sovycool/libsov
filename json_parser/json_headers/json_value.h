@@ -38,5 +38,7 @@ int add_to_json(
 ** @return Returns value on sucess, NULL on fail.
 */
 json_value_t *get_json_value(json_object_t *json, char *key);
+void destroy_json_value(json_value_t *value);
+void display_json_value(json_value_t *value, int tab);
 
 #endif /* !JSON_VALUE_H_ */
