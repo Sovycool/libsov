@@ -14,7 +14,7 @@ int add_to_json(json_object_t *json, char *key,
 {
     json_pair_t *pair = new_json_pair();
 
-    pair->key = key;
+    pair->key = my_strdup(key);
     pair->value = new_json_value(value, type);
     add_to_list(json->pairs, pair);
     return 1;

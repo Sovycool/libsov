@@ -20,6 +20,7 @@ LIBMY =	my/printing_functions/my_putchar.c			\
 		my/string_control/my_are_chars_in_str.c	\
 		my/string_control/my_is_str_in_str.c	\
 		my/string_control/my_strcmp.c			\
+		my/string_control/my_strncmp.c			\
 		\
 		my/string_manipulation/my_revstr.c				\
 		my/string_manipulation/my_strdup.c				\

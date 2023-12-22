@@ -14,11 +14,14 @@ void display_json_value(json_value_t *value, int tab)
         case STRING :
             my_printf("\"%s\"", value->value.str_);
             break;
-        case INT :
-            my_putint(value->value.int_);
+        case BOOL :
+            if (*value->value.bool_)
+                my_printf("true");
+            else
+                my_printf("false");
             break;
-        case DOUBLE :
-            my_putfloat(*value->value.double_);
+        case NUMBER :
+            my_putfloat(*value->value.number_);
             break;
         case OBJECT :
             display_json_object(value->value.object_, tab + 1);

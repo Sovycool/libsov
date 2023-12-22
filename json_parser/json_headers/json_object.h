@@ -10,11 +10,10 @@
 
     #include "json_types.h"
 
-/*!
-** @brief Creates a new empty json object.
-*/
 json_object_t *new_json_object(void);
 void destroy_json_object(json_object_t *object);
 void display_json_object(json_object_t *object, int tab);
+json_object_t *extract_json_object(char *str);
+char *extract_json_object_str(char *str);
 
 #endif /* !JSON_OBJECT_H_ */

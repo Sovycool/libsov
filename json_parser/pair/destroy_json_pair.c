@@ -12,6 +12,7 @@ void destroy_json_pair(json_pair_t *pair)
 {
     if (pair == NULL)
         return;
+    free(pair->key);
     destroy_json_value(pair->value);
     free(pair);
 }

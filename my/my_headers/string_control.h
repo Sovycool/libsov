@@ -52,5 +52,14 @@ int my_is_str_in_str(char const *sequence, char const *str);
 ** the two strings. `0` if strings are the same.
 */
 int my_strcmp(char const *s1, char const *s2);
+/*!
+** @brief Compares the `n` first characters of `s1` and `s2`
+** @param s1 The first string to compare.
+** @param s2 The second string to compare.
+** @param n How many characters you want to compare
+** @return The difference between the firsts non-equal characters in
+** the two strings. `0` if strings are the same.
+*/
+int my_strncmp(char const *s1, char const *s2, int n);
 
 #endif /* !STRING_CONTROL_H_ */
