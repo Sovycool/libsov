@@ -9,7 +9,7 @@
 #include "../../my/my.h"
 #include <stdlib.h>
 
-json_value_t *get_json_value(json_object_t *json, char *key)
+void *get_json_value(json_object_t *json, char *key)
 {
     linked_list_t *pairs = json->pairs;
     json_pair_t *pair;
@@ -17,7 +17,7 @@ json_value_t *get_json_value(json_object_t *json, char *key)
 
     for (int i = 0; i < nb_pairs; i++) {
         if (my_strcmp(pair->key, key) == 0)
-            return pair->value;
+            return pair->value->value.void_;
         free(pair);
         pair = (json_pair_t *)get_list_at_index(pairs, i)->data;
     }

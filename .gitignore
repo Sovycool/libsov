@@ -3,4 +3,6 @@
 *.o
 *.log
 *.vg*
+*.gc*
 *.json
+vgcore*

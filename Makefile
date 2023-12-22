@@ -49,6 +49,7 @@ JSON =	json_parser/json/new_json.c			\
 		json_parser/object/new_json_object.c		\
 		json_parser/object/destroy_json_object.c	\
 		json_parser/object/display_json_object.c	\
+		json_parser/object/extract_json_object.c	\
 		\
 		json_parser/pair/new_json_pair.c		\
 		json_parser/pair/destroy_json_pair.c	\
@@ -58,9 +59,11 @@ JSON =	json_parser/json/new_json.c			\
 		json_parser/value/new_json_value.c		\
 		json_parser/value/destroy_json_value.c	\
 		json_parser/value/display_json_value.c	\
+		json_parser/value/extract_json_value.c	\
 		\
 		json_parser/array/destroy_json_array.c	\
 		json_parser/array/display_json_array.c	\
+		json_parser/array/extract_json_array.c	\
 
 LL =	linked_list/new_list.c			\
 		linked_list/add_to_list.c		\

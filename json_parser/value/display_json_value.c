@@ -8,6 +8,14 @@
 #include "../json_parser.h"
 #include "../../my/my.h"
 
+static void display_number(double nb)
+{
+    if (nb == (int)nb)
+        my_printfloat(nb, 0);
+    else
+        my_printfloat(nb, 3);
+}
+
 void display_json_value(json_value_t *value, int tab)
 {
     switch (value->type) {
@@ -21,7 +29,7 @@ void display_json_value(json_value_t *value, int tab)
                 my_printf("false");
             break;
         case NUMBER :
-            my_putfloat(*value->value.number_);
+            display_number(*value->value.number_);
             break;
         case OBJECT :
             display_json_object(value->value.object_, tab + 1);
