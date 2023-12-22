@@ -17,9 +17,9 @@
 int main(void)
 {
     char *str = fman_get_file("test.json");
-    my_printf("The extracted file :\n%s\n\n", str);
     json_object_t *json = extract_json(str);
 
+    my_printf("The extracted file :\n%s\n\n", str);
     my_printf("The extracted json :\n\n");
     display_json(json);
     destroy_json(json);

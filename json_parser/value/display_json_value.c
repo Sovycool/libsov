@@ -13,7 +13,7 @@ static void display_number(double nb)
     if (nb == (int)nb)
         my_printfloat(nb, 0);
     else
-        my_printfloat(nb, 3);
+        my_printfloat(nb, 2);
 }
 
 void display_json_value(json_value_t *value, int tab)
