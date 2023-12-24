@@ -13,7 +13,6 @@ static char *extract_str(char *str)
 {
     int opened_quotes = 0;
 
-    my_printf("\n%s\n", str);
     for (int i = 0; str[i]; i++) {
         if (str[i] == '\"' && opened_quotes == 0) {
             opened_quotes++;

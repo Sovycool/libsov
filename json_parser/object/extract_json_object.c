@@ -32,16 +32,20 @@ char *extract_json_object_str(char *str)
     int opened_quotes = 0;
 
     for (int i = 0; str[i]; i++) {
-        opened_curly += my_abs(my_is_char_in_str(str[i], "}}{")) - 1;
         if (str[i] == '\"' && opened_quotes == 0) {
             opened_quotes++;
             continue;
         }
+        if (str[i] == '{' && opened_quotes == 0) {
+            opened_curly++;
+            continue;
+        }
         if (str[i] == '\"' && str[i - 1] != '\\')
             opened_quotes--;
+        if (str[i] == '}' && opened_quotes == 0)
+            opened_curly--;
         if (str[i] == '}' && opened_curly == 0 && opened_quotes == 0)
             return my_strndup(str + 1, i - 1);
-        opened_curly = (opened_curly < 0 ? 0 : opened_curly);
     }
     return NULL;
 }

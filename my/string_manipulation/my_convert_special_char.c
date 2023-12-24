@@ -27,7 +27,7 @@ char get_special_char(char c)
             return '\f';
         case 'r' :
             return '\r';
-        default :
+        default:
             return c;
     }
 }
