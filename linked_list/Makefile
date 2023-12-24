@@ -1,19 +1,21 @@
 ##
 ## EPITECH PROJECT, 2023
-## Makefile
+## linked_list
 ## File description:
-## ...
+## Makefile
 ##
 
 SRCS =	new_list.c			\
 		add_to_list.c		\
+		add_to_stack.c		\
 		remove_from_list.c	\
+		destroy_list.c		\
 		list_len.c			\
 		sort_list.c			\
 		get_list_at_index.c	\
 		list_to_array.c		\
 		array_len.c			\
-		array_n_dup.c
+		array_n_dup.c		\
 
 OBJS =		$(SRCS:.c=.o)
 

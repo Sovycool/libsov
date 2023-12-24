@@ -8,7 +8,7 @@
 #include "my/my.h"
 #include "linked_list/linked_list.h"
 #include "json_parser/jpar.h"
-#include "file_manipulation/file_manipulation.h"
+#include "file_manipulation/fman.h"
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>

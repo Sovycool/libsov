@@ -103,11 +103,13 @@ makelibs:
 	make -C my/
 	make -C linked_list/
 	make -C json_parser/
+	make -C file_manipulation/
 
 fcleanlibs:
 	make fclean -C my/
 	make fclean -C linked_list/
 	make fclean -C json_parser/
+	make fclean -C file_manipulation/
 
 clean:
 	rm -f $(OBJS)
