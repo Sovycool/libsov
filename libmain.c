@@ -16,18 +16,10 @@
 
 int main(void)
 {
-    /*char *str = "123456789\\\"123456789\\\"123456789\\\"";
-    char *converted = my_convert_special_char(str);
-
-    my_printf("%s\n", str);
-    my_printf("%s\n", converted);
-    free(converted);*/
     char *str = fman_get_file("test.json");
     json_object_t *json = extract_json(str);
 
-    my_printf("The extracted file :\n%s\n\n", str);
-    my_printf("The extracted json :\n\n");
-    display_json(json);
+    my_printf("%d\n", *(int *)get_json_value(json, "alive"));
     destroy_json(json);
     free(str);
     return 0;

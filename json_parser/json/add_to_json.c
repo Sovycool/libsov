@@ -14,8 +14,11 @@ int add_to_json(json_object_t *json, char *key,
 {
     json_pair_t *pair = new_json_pair();
 
-    pair->key = my_strdup(key);
-    pair->value = new_json_value(value, type);
-    add_to_list(json->pairs, pair);
-    return 1;
+    if (get_json_value(json, key) == NULL) {
+        pair->key = my_strdup(key);
+        pair->value = new_json_value(value, type);
+        add_to_list(json->pairs, pair);
+        return 1;
+    }
+    return 0;
 }
