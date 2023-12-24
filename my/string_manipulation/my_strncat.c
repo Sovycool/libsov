@@ -14,8 +14,8 @@ char *my_strncat(char *a, char *b, int n, int m)
     int len_a = my_strlen(a);
     int len_b = my_strlen(b);
 
-    len_a = (len_a < n ? len_a : n);
-    len_b = (len_b < n ? len_b : n);
+    len_a = (len_a < n || n < 0 ? len_a : n);
+    len_b = (len_b < m || m < 0 ? len_b : m);
     output = malloc(sizeof(char) * ((len_a + len_b) + 1));
     for (int i = 0; i < len_a + len_b; i++)
         if (i < len_a)

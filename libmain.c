@@ -16,6 +16,12 @@
 
 int main(void)
 {
+    /*char *str = "123456789\\\"123456789\\\"123456789\\\"";
+    char *converted = my_convert_special_char(str);
+
+    my_printf("%s\n", str);
+    my_printf("%s\n", converted);
+    free(converted);*/
     char *str = fman_get_file("test.json");
     json_object_t *json = extract_json(str);
 

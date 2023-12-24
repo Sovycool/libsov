@@ -13,6 +13,7 @@ static char *extract_str(char *str)
 {
     int opened_quotes = 0;
 
+    my_printf("\n%s\n", str);
     for (int i = 0; str[i]; i++) {
         if (str[i] == '\"' && opened_quotes == 0) {
             opened_quotes++;
@@ -71,8 +72,15 @@ int extract_json_value_len(char *str)
 
 json_value_t *extract_json_value(char *str)
 {
-    if (str[0] == '\"')
-        return new_json_value((void *)extract_str(str), STRING);
+    char *str_value;
+    char *converted_str;
+
+    if (str[0] == '\"') {
+        str_value = extract_str(str);
+        converted_str = my_convert_special_char(str_value);
+        free(str_value);
+        return new_json_value((void *)converted_str, STRING);
+    }
     if (my_is_char_in_str(str[0], "-0123456789") != -1)
         return new_json_value((void *)extract_json_value_number(str), NUMBER);
     if (str[0] == '{')

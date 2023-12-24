@@ -22,15 +22,16 @@ LIBMY =	my/printing_functions/my_putchar.c			\
 		my/string_control/my_strcmp.c			\
 		my/string_control/my_strncmp.c			\
 		\
-		my/string_manipulation/my_revstr.c				\
-		my/string_manipulation/my_strdup.c				\
-		my/string_manipulation/my_strndup.c				\
-		my/string_manipulation/my_strcat.c				\
-		my/string_manipulation/my_strncat.c				\
-		my/string_manipulation/my_atoi.c				\
-		my/string_manipulation/my_atof.c				\
-		my/string_manipulation/my_str_to_word_array.c	\
-		my/string_manipulation/my_word_array_to_str.c	\
+		my/string_manipulation/my_revstr.c					\
+		my/string_manipulation/my_strdup.c					\
+		my/string_manipulation/my_strndup.c					\
+		my/string_manipulation/my_strcat.c					\
+		my/string_manipulation/my_strncat.c					\
+		my/string_manipulation/my_atoi.c					\
+		my/string_manipulation/my_atof.c					\
+		my/string_manipulation/my_str_to_word_array.c		\
+		my/string_manipulation/my_word_array_to_str.c		\
+		my/string_manipulation/my_convert_special_char.c	\
 		\
 		my/maths_functions/my_abs.c			\
 		my/maths_functions/my_pow.c			\

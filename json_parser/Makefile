@@ -9,11 +9,11 @@ SRCS =		\
 
 OBJS =		$(SRCS:.c=.o)
 
-NAME =		libjson.a
+NAME =		libjpar.a
 
-HEADER =	json_parser.h
+HEADER =	jpar.h
 
-HEADERS =	json_headers/
+HEADERS =	\
 
 all: 		compil copy_lib copy_h
 

@@ -79,6 +79,13 @@ char *my_word_array_to_str(char **tab, char *delimiter);
 ** @param n How many words you want to concatenate.
 ** @return An array containing all words in your string.
 */
-char *my_n_word_array_to_str(char **tab, char *delimiter);
+char *my_n_word_array_to_str(char **tab, char *delimiter, int n);
+/*!
+** @brief Search for pairs of `\\` and other character and convert them into
+** the corresponding special character.
+** @param str The string it will look into.
+** @return A string after conversion.
+*/
+char *my_convert_special_char(char *str);
 
 #endif /* !STRING_MANIPULATION_H_ */
