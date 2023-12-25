@@ -16,11 +16,7 @@
 
 int main(void)
 {
-    char *str = fman_get_file("test.json");
-    json_object_t *json = extract_json(str);
+    int nb = fman_display_file("test.json");
 
-    my_printf("%d\n", *(int *)get_json_value(json, "alive"));
-    destroy_json(json);
-    free(str);
     return 0;
 }

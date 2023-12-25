@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRCS =		fman_get_file.c	\
+SRCS =		fman_get_file.c		\
+			fman_display_file.c	\
 
 OBJS =		$(SRCS:.c=.o)
 
