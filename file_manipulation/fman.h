@@ -14,5 +14,11 @@
 ** @return `char *` containing the file's content.
 */
 char *fman_get_file(char *path);
+/*!
+** @brief Displays a file content.
+** @param path Path to the file.
+** @return The number of character printed.
+*/
+int fman_display_file(char *path);
 
 #endif /* !FILE_MANIPULATION_H_ */
