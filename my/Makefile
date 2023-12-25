@@ -59,7 +59,7 @@ copy_lib:
 copy_h:
 	mkdir -p ../../include
 	cp $(HEADER) ../../include/$(HEADER)
-	cp $(HEADERS) ../../include/$(HEADERS)
+	cp -r $(HEADERS) ../../include/$(HEADERS)
 
 clean:
 	rm -f $(OBJS)
@@ -68,6 +68,6 @@ fclean: 	clean
 	rm -f $(NAME)
 	rm -f ../$(NAME)
 	rm -f ../../include/$(HEADER)
-	rm -f ../../include/$(HEADERS)
+	rm -rf ../../include/$(HEADERS)
 
 re:	fclean all

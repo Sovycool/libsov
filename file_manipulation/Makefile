@@ -11,7 +11,7 @@ OBJS =		$(SRCS:.c=.o)
 
 NAME =		libfman.a
 
-HEADER =	jfman.h
+HEADER =	fman.h
 
 HEADERS =	\
 
