@@ -92,7 +92,7 @@ NAME =		libjpar.a
 
 HEADER =	jpar.h
 
-HEADERS =	json_parser/
+HEADERS =	json_headers/
 
 all: 		compil copy_lib copy_h
 
