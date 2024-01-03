@@ -5,7 +5,7 @@
 ** destroy_json_pair
 */
 
-#include "../jpar.h"
+#include "../json_parser.h"
 #include <stdlib.h>
 
 void destroy_json_pair(json_pair_t *pair)

@@ -5,7 +5,7 @@
 ** new_json
 */
 
-#include "../jpar.h"
+#include "../json_parser.h"
 #include <stdlib.h>
 
 json_object_t *new_json(void)

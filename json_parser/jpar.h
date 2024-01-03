@@ -8,7 +8,11 @@
 #ifndef JPAR_H_
     #define JPAR_H_
 
-    #include "json_headers/json_parser.h"
+    #include "json_headers/json_types.h"
+    #include "json_headers/json_object.h"
+    #include "json_headers/json_pair.h"
+    #include "json_headers/json_value.h"
+    #include "json_headers/json_array.h"
 
 json_object_t *new_json(void);
 void destroy_json(json_object_t *json);

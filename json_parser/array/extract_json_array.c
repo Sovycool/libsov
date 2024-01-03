@@ -5,7 +5,7 @@
 ** extract_json_array
 */
 
-#include "../jpar.h"
+#include "../json_parser.h"
 #include "../../my/my.h"
 #include <stdlib.h>
 

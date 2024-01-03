@@ -5,7 +5,7 @@
 ** new_json_pair
 */
 
-#include "../jpar.h"
+#include "../json_parser.h"
 #include <stdlib.h>
 
 json_pair_t *new_json_pair(void)
