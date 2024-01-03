@@ -20,7 +20,7 @@ OBJS =		$(SRCS:.c=.o)
 
 NAME =		libll.a
 
-HEADER =	linked_list.h
+HEADER =	ll.h
 
 all: 		compil copy_lib copy_h
 
