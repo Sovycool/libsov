@@ -40,22 +40,22 @@ MY_SRCS = 	../my/printing_functions/my_putchar.c			\
 			\
 			../my/freeing_functions/my_free_word_array.c	\
 
-LL_SRCS = 	../linked_list/new_list.c			\
-			../linked_list/add_to_list.c		\
-			../linked_list/remove_from_list.c	\
-			../linked_list/destroy_list.c		\
-			../linked_list/list_len.c			\
-			../linked_list/sort_list.c			\
-			../linked_list/get_list_at_index.c	\
-			../linked_list/list_to_array.c		\
-			../linked_list/array_len.c			\
-			../linked_list/array_n_dup.c		\
+LL_SRCS = 	../linked_list/linked_list/new_list.c			\
+			../linked_list/linked_list/add_to_list.c		\
+			../linked_list/linked_list/remove_from_list.c	\
+			../linked_list/linked_list/destroy_list.c		\
+			../linked_list/linked_list/list_len.c			\
+			../linked_list/linked_list/sort_list.c			\
+			../linked_list/linked_list/get_list_at_index.c	\
+			../linked_list/linked_list/list_to_array.c		\
+			../linked_list/linked_list/array_len.c			\
+			../linked_list/linked_list/array_n_dup.c		\
 			\
-			../linked_dict/new_dict.c			\
-			../linked_dict/set_in_dict.c		\
-			../linked_dict/remove_from_dict.c	\
-			../linked_dict/destroy_dict.c		\
-			../linked_dict/dict_len.c			\
+			../linked_list/linked_dict/new_dict.c			\
+			../linked_list/linked_dict/set_in_dict.c		\
+			../linked_list/linked_dict/remove_from_dict.c	\
+			../linked_list/linked_dict/destroy_dict.c		\
+			../linked_list/linked_dict/dict_len.c			\
 
 SRCS =	$(MY_SRCS)	\
 		$(LL_SRCS)	\
