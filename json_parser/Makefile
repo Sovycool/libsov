@@ -50,6 +50,12 @@ LL_SRCS = 	../linked_list/new_list.c			\
 			../linked_list/list_to_array.c		\
 			../linked_list/array_len.c			\
 			../linked_list/array_n_dup.c		\
+			\
+			../linked_dict/new_dict.c			\
+			../linked_dict/set_in_dict.c		\
+			../linked_dict/remove_from_dict.c	\
+			../linked_dict/destroy_dict.c		\
+			../linked_dict/dict_len.c			\
 
 SRCS =	$(MY_SRCS)	\
 		$(LL_SRCS)	\
