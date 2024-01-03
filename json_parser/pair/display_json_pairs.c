@@ -5,7 +5,7 @@
 ** display_json_pairs
 */
 
-#include "../json_parser.h"
+#include "../jpar.h"
 #include "../../my/my.h"
 
 void display_json_pairs(linked_list_t *pairs, int tab)

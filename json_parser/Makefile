@@ -92,6 +92,8 @@ NAME =		libjpar.a
 
 HEADER =	jpar.h
 
+HEADERS =	json_parser/
+
 all: 		compil copy_lib copy_h
 
 compil:		$(OBJS)
@@ -103,6 +105,7 @@ copy_lib:
 copy_h:
 	mkdir -p ../../include
 	cp $(HEADER) ../../include/$(HEADER)
+	cp -r $(HEADERS) ../../include/$(HEADERS)
 
 clean:
 	rm -f $(OBJS)
@@ -111,5 +114,6 @@ fclean: 	clean
 	rm -f $(NAME)
 	rm -f ../$(NAME)
 	rm -f ../../include/$(HEADER)
+	rm -rf ../../include/$(HEADERS)
 
 re:	fclean all

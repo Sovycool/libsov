@@ -5,7 +5,7 @@
 ** display_json
 */
 
-#include "../json_parser.h"
+#include "../jpar.h"
 
 void display_json(json_object_t *json)
 {

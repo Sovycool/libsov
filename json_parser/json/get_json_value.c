@@ -5,7 +5,7 @@
 ** get_json_value
 */
 
-#include "../json_parser.h"
+#include "../jpar.h"
 #include "../../my/my.h"
 #include <stdlib.h>
 

@@ -8,8 +8,7 @@
 #ifndef JPAR_H_
     #define JPAR_H_
 
-typedef enum json_value_type json_value_type_t;
-typedef struct json_object json_object_t;
+    #include "json_headers/json_parser.h"
 
 json_object_t *new_json(void);
 void destroy_json(json_object_t *json);

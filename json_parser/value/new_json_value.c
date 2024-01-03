@@ -5,7 +5,7 @@
 ** new_json_value
 */
 
-#include "../json_parser.h"
+#include "../jpar.h"
 #include <stdlib.h>
     /*switch (type) {
         case STRING:

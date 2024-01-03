@@ -5,7 +5,7 @@
 ** destroy_json_value
 */
 
-#include "../json_parser.h"
+#include "../jpar.h"
 #include <stdlib.h>
 
 void destroy_json_value(json_value_t *value)

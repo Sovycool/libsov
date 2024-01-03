@@ -16,17 +16,8 @@
 
 int main(void)
 {
-    linked_dict_t *dict = new_dict();
-    linked_dict_t *link = dict;
+    json_object_t *json = extract_json(fman_get_file("test.json"));
 
-    set_in_dict(dict, "0", "Hello");
-    set_in_dict(dict, "1", "Hello");
-    remove_from_dict(dict, "0");
-    remove_from_dict(dict, "1");
-    for (NULL; link->key; link = link->next) {
-        my_printf("Key = %s, Value = %s\n", link->key, link->data);
-    }
-    my_printf("%d\n", dict_len(dict));
-    destroy_dict(dict);
-    return 0;
+    printf("> %s\n", (((json_value_t *)((linked_list_t *)get_json_value(get_json_value(json, "resources"), "textures"))->data))->value);
+    display_json(json);
 }
