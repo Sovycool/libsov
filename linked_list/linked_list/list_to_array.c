@@ -5,7 +5,7 @@
 ** list_to_array
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 void **list_to_array(linked_list_t *list)

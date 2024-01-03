@@ -5,17 +5,17 @@
 ## Makefile
 ##
 
-SRCS =	new_list.c			\
-		add_to_list.c		\
-		add_to_stack.c		\
-		remove_from_list.c	\
-		destroy_list.c		\
-		list_len.c			\
-		sort_list.c			\
-		get_list_at_index.c	\
-		list_to_array.c		\
-		array_len.c			\
-		array_n_dup.c		\
+SRCS =	linked_list/new_list.c			\
+		linked_list/add_to_list.c		\
+		linked_list/add_to_stack.c		\
+		linked_list/remove_from_list.c	\
+		linked_list/destroy_list.c		\
+		linked_list/list_len.c			\
+		linked_list/sort_list.c			\
+		linked_list/get_list_at_index.c	\
+		linked_list/list_to_array.c		\
+		linked_list/array_len.c			\
+		linked_list/array_n_dup.c		\
 
 OBJS =		$(SRCS:.c=.o)
 

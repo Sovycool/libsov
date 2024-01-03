@@ -9,7 +9,7 @@
     #define JSON_STRUCT_H_
 
     #include "json_types.h"
-    #include "../../linked_list/linked_list.h"
+    #include "../../linked_list/ll.h"
 
 enum json_value_type {
     STRING,

@@ -57,7 +57,7 @@ linked_list_t *extract_json_array(char *str)
         if (my_is_char_in_str(str[i], "-0123456789\"{[") != -1) {
             value = extract_json_value(str + i);
             i += extract_json_value_len(str + i);
-            add_to_list(list, (void *)value);
+            add_to_list(list, (void *)value, -1);
         }
     }
     free(str);

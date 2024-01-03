@@ -5,7 +5,7 @@
 ** list_len
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 int list_len(linked_list_t *list)

@@ -6,7 +6,6 @@
 */
 
 #include "../json_parser.h"
-#include "../../linked_list/linked_list.h"
 #include <stdlib.h>
 
 void destroy_json_array(linked_list_t *list)

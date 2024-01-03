@@ -5,7 +5,7 @@
 ** new_list
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 linked_list_t *new_list(void)

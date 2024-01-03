@@ -11,7 +11,7 @@ int array_len(void **array)
 {
     int i = 0;
 
-    while (array[i] != NULL)
+    while (array[i])
         i++;
     return i;
 }

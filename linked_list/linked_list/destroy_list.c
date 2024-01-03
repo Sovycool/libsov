@@ -5,12 +5,12 @@
 ** destroy_list
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 void destroy_list(linked_list_t *list)
 {
-    if (list->data != NULL)
+    if (list->data)
         destroy_list(list->next);
     free(list);
 }

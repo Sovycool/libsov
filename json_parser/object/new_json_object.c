@@ -6,7 +6,6 @@
 */
 
 #include "../json_parser.h"
-#include "../../linked_list/linked_list.h"
 #include <stdlib.h>
 
 json_object_t *new_json_object(void)

@@ -5,7 +5,7 @@
 ** array_n_dup
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 void **array_n_dup(void **array, int n)
@@ -15,7 +15,7 @@ void **array_n_dup(void **array, int n)
         sizeof(void *) * (n < array_len(array) ? n + 1 : array_len(array) + 1)
     );
 
-    while (array[i] != NULL && i < n) {
+    while (array[i] && i < n) {
         new_array[i] = array[i];
         i++;
     }

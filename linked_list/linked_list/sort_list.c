@@ -5,7 +5,7 @@
 ** sort_list
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 static cmp_fctn_t test_sort(void *value_a, void *value_b, cmp_fctn_t *all_cmp)

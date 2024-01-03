@@ -6,8 +6,6 @@
 */
 
 #include "../json_parser.h"
-#include "../../linked_list/linked_list.h"
-#include "../../my/my.h"
 #include <stdlib.h>
     /*switch (type) {
         case STRING:

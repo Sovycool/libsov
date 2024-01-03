@@ -5,7 +5,7 @@
 ** get_list_index
 */
 
-#include "linked_list.h"
+#include "../ll.h"
 #include <stdlib.h>
 
 linked_list_t *get_list_at_index(linked_list_t *list, int index)
