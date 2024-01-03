@@ -9,7 +9,6 @@
     #define JSON_STRUCT_H_
 
     #include "json_types.h"
-    #include "../../linked_list/ll.h"
 
 enum json_value_type {
     STRING,
@@ -27,7 +26,7 @@ struct json_value {
         int *bool_;
         double *number_;
         struct json_object *object_;
-        linked_list_t *array_;
+        struct linked_list *array_;
         void *void_;
     } value;
 };
@@ -38,7 +37,7 @@ struct json_pair {
 };
 
 struct json_object {
-    linked_list_t *pairs;
+    struct linked_list *pairs;
 };
 
 
