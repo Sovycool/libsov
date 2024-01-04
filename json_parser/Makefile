@@ -55,7 +55,7 @@ LL_SRCS = 	../linked_list/linked_list/new_list.c			\
 			../linked_list/linked_dict/set_in_dict.c		\
 			../linked_list/linked_dict/remove_from_dict.c	\
 			../linked_list/linked_dict/destroy_dict.c		\
-			../linked_list/linked_dict/dict_len.linked_listc			\
+			../linked_list/linked_dict/dict_len.c			\
 			../linked_list/linked_dict/get_in_dict.c		\
 
 SRCS =	$(MY_SRCS)	\
