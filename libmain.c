@@ -16,12 +16,6 @@
 
 int main(void)
 {
-    linked_dict_t *dict = new_dict();
-
-    set_in_dict(dict, "0", "Hello");
-    set_in_dict(dict, "1", "Hi");
-    set_in_dict(dict, "2", "Bye");
-    set_in_dict(dict, "3", "Ciao");
-    my_printf("%s\n", get_in_dict(dict, "1"));
-    my_printf("%s\n", get_in_dict(dict, "3"));
+    my_printf("%f\n", my_atof("1.25"));
+    display_json(extract_json(fman_get_file("test.json")));
 }

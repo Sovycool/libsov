@@ -18,12 +18,21 @@ static int count_digits(char *str)
     return i;
 }
 
-static struct double_as_string * load_struct(char *str)
+static struct double_as_string *load_struct(char *str)
 {
     struct double_as_string *nb = malloc(sizeof(struct double_as_string));
 
-    nb->dec_nb_digits = my_are_chars_in_str("0123456789", str);
+    nb->first_digit_index = my_are_chars_in_str("0123456789", str);
+    nb->integers = NULL;
+    nb->decimals = NULL;
     return nb;
+}
+
+static void destroy_struct(struct double_as_string *nb)
+{
+    free(nb->integers);
+    free(nb->decimals);
+    free(nb);
 }
 
 double my_atof(char *str)
@@ -45,7 +54,6 @@ double my_atof(char *str)
     if (nb->first_digit_index > 0)
         if (str[nb->first_digit_index - 1] == '-')
             output = -output;
-    free(nb->integers);
-    free(nb->decimals);
+    destroy_struct(nb);
     return output;
 }
