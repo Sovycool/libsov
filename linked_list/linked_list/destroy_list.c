@@ -12,5 +12,6 @@ void destroy_list(linked_list_t *list)
 {
     if (list->data)
         destroy_list(list->next);
+    free(list->data);
     free(list);
 }
