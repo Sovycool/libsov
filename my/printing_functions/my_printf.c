@@ -23,8 +23,6 @@ static flag_t *reset_flag(flag_t *flag)
 
 static flag_t *process_flag(char *str, int *idx, flag_t *flag)
 {
-    void *data;
-
     *idx += 1;
     if (str[*idx] == '.') {
         flag->precision = malloc(sizeof(int));
@@ -58,6 +56,7 @@ static int print_flag(flag_t *flag, va_list args)
         default:
             break;
     }
+    return 0;
 }
 
 int my_printf(char *str, ...)
