@@ -21,6 +21,7 @@ SRCS =	linked_list/new_list.c			\
 		linked_dict/remove_from_dict.c	\
 		linked_dict/destroy_dict.c		\
 		linked_dict/dict_len.c			\
+		linked_dict/get_in_dict.c		\
 
 OBJS =		$(SRCS:.c=.o)
 

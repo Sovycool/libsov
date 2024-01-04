@@ -16,8 +16,12 @@
 
 int main(void)
 {
-    json_object_t *json = extract_json(fman_get_file("test.json"));
+    linked_dict_t *dict = new_dict();
 
-    display_json(json);
-    destroy_json(json);
+    set_in_dict(dict, "0", "Hello");
+    set_in_dict(dict, "1", "Hi");
+    set_in_dict(dict, "2", "Bye");
+    set_in_dict(dict, "3", "Ciao");
+    my_printf("%s\n", get_in_dict(dict, "1"));
+    my_printf("%s\n", get_in_dict(dict, "3"));
 }

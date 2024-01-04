@@ -38,5 +38,6 @@ int set_in_dict(linked_dict_t *dict, char *key, void *data);
 void remove_from_dict(linked_dict_t *dict, char *key);
 void destroy_dict(linked_dict_t *dict);
 int dict_len(linked_dict_t *dict);
+void *get_in_dict(linked_dict_t *dict, char *key);
 
 #endif /* !LINKED_LIST_H_ */
