@@ -18,6 +18,6 @@ int main(void)
 {
     json_object_t *json = extract_json(fman_get_file("test.json"));
 
-    printf("> %s\n", (((json_value_t *)((linked_list_t *)get_json_value(get_json_value(json, "resources"), "textures"))->data))->value);
     display_json(json);
+    destroy_json(json);
 }

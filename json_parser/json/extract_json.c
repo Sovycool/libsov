@@ -12,7 +12,6 @@
 json_object_t *extract_json(char *str)
 {
     json_object_t *json;
-    char *main_json;
     int i = 0;
 
     while (str[i] != '{' && str[i])

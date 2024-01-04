@@ -9,23 +9,6 @@
 #include "../../my/my.h"
 #include <stdlib.h>
 
-static char *extract_str(char *str)
-{
-    int opened_quotes = 0;
-
-    for (int i = 0; str[i]; i++) {
-        if (str[i] == '\"' && opened_quotes == 0) {
-            opened_quotes++;
-            continue;
-        }
-        if (str[i] == '\"' && str[i - 1] != '\\')
-            opened_quotes--;
-        if (str[i] == '\"' && opened_quotes == 0)
-            return my_strndup(str + 1, i - 1);
-    }
-    return NULL;
-}
-
 char *extract_json_array_str(char *str)
 {
     int opened_brackets = 0;

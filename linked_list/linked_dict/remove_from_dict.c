@@ -21,9 +21,9 @@ void remove_from_dict(linked_dict_t *dict, char *key)
 {
     linked_dict_t *item = dict;
 
-    for (NULL; cmp(item->key, key) && item->key; item = item->next);
+    for (; cmp(item->key, key) && item->key; item = item->next);
     free(item->key);
-    for (NULL; item->key; item = item->next) {
+    for (; item->key; item = item->next) {
         item->key = item->next->key;
         item->data = item->next->data;
     }

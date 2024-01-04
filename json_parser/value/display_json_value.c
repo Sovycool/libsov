@@ -16,6 +16,14 @@ static void display_number(double nb)
         my_printfloat(nb, 2);
 }
 
+static void display_bool(int boolean)
+{
+    if (boolean)
+        my_printf("true");
+    else
+        my_printf("false");
+}
+
 void display_json_value(json_value_t *value, int tab)
 {
     switch (value->type) {
@@ -23,10 +31,7 @@ void display_json_value(json_value_t *value, int tab)
             my_printf("\"%s\"", value->value.str_);
             break;
         case BOOL :
-            if (*value->value.bool_)
-                my_printf("true");
-            else
-                my_printf("false");
+            display_bool(*value->value.bool_);
             break;
         case NUMBER :
             display_number(*value->value.number_);
@@ -36,6 +41,8 @@ void display_json_value(json_value_t *value, int tab)
             break;
         case ARRAY :
             display_json_array(value->value.array_, tab + 1);
+            break;
+        default:
             break;
     }
 }

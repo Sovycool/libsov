@@ -96,14 +96,14 @@ OBJS =		$(SRCS:.c=.o)
 
 NAME = 		libtest
 
-FLAGS= 		-g -Wall -Werror -Wextra
+export CFLAGS= 	-g -Wall -Wextra
 
 LIBS =		\
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	gcc $(FLAGS) -o $(NAME) $(OBJS) -L. $(LIBS)
+	gcc $(CFLAGS) -o $(NAME) $(OBJS) -L. $(LIBS)
 
 makelibs:
 	make -C my/
