@@ -86,6 +86,7 @@ LL =	linked_list/linked_list/new_list.c			\
 
 FMAN =	file_manipulation/fman_get_file.c		\
 		file_manipulation/fman_display_file.c	\
+		file_manipulation/fman_dup_file.c		\
 
 SRCS =	libmain.c	\
 		$(LIBMY)	\

@@ -7,6 +7,7 @@
 
 SRCS =		fman_get_file.c		\
 			fman_display_file.c	\
+			fman_dup_file.c		\
 
 OBJS =		$(SRCS:.c=.o)
 

@@ -16,6 +16,5 @@
 
 int main(void)
 {
-    my_printf("%f\n", my_atof("1.25"));
-    display_json(extract_json(fman_get_file("test.json")));
+    fman_dup_file("test.json", "dup.json");
 }
