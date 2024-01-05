@@ -20,6 +20,6 @@ char *fman_get_file(char *path);
 ** @return The number of character printed.
 */
 int fman_display_file(char *path);
-void fman_dup_file(char *file, char *new);
+int fman_dup_file(char *file, char *new);
 
 #endif /* !FILE_MANIPULATION_H_ */
