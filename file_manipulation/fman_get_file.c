@@ -17,6 +17,8 @@ char *fman_get_file(char *path)
     char *output;
     int buff_size;
 
+    if (fd == -1)
+        return NULL;
     stat(path, &s);
     buff_size = s.st_size;
     output = malloc(sizeof(char) * (buff_size + 1));
