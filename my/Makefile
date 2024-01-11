@@ -28,6 +28,7 @@ SRCS =	printing_functions/my_putchar.c			\
 		string_manipulation/my_strcat.c					\
 		string_manipulation/my_strncat.c				\
 		string_manipulation/my_atoi.c					\
+		string_manipulation/my_itoa.c					\
 		string_manipulation/my_atof.c					\
 		string_manipulation/my_str_to_word_array.c		\
 		string_manipulation/my_word_array_to_str.c		\

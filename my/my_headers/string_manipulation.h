@@ -52,6 +52,12 @@ char *my_strncat(char *a, char *b, int n, int m);
 */
 int my_atoi(char *str);
 /*!
+** @brief Converts `nb` into a string.
+** @param nb The integer you want to convert.
+** @return The string corresponding to your integer.
+*/
+char *my_itoa(int nb);
+/*!
 ** @brief Converts `str` into a float.
 ** @param str The string containing your float.
 ** @return The float corresponding to your string as a `double`,

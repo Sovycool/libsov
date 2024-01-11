@@ -13,8 +13,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <string.h>
 
 int main(void)
 {
-    fman_dup_file("test.json", "dup.json");
+    my_printf("%s\n", my_itoa(3215));
 }
