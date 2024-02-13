@@ -18,6 +18,7 @@ int my_is_digit(char c);
 ** @brief Mesure the length of `str`.
 ** @param str The string you want the length of.
 ** @return The number of character in `str`.
+** `-1` if `str` is `NULL`
 */
 int my_strlen(char const *str);
 /*!

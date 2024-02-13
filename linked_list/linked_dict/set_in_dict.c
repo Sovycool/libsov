@@ -40,19 +40,28 @@ static char *dup(char const *src)
     return str;
 }
 
+static void push_data(linked_dict_t *dict)
+{
+    if (dict->next) {
+        push_data(dict->next);
+        dict->next->key = dict->key;
+        dict->next->data = dict->data;
+    } else {
+        dict->next = new_dict();
+        dict->next->key = dict->key;
+        dict->next->data = dict->data;
+    }
+}
+
 int set_in_dict(linked_dict_t *dict, char *key, void *data)
 {
-    linked_dict_t *link = dict;
-
-    while (link->key) {
+    for (linked_dict_t *link = dict; link->key; link = link->next)
         if (cmp(link->key, key) == 0) {
             link->data = data;
             return 1;
         }
-        link = link->next;
-    }
-    link->next = new_dict();
-    link->key = dup(key);
-    link->data = data;
+    push_data(dict);
+    dict->key = dup(key);
+    dict->data = data;
     return 1;
 }
