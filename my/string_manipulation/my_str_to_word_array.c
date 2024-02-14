@@ -14,7 +14,8 @@ static int count_word(char *str, char *delimiter)
 
     for (int i = 0; str[i]; i++)
         if (my_is_char_in_str(str[i], delimiter) != -1 &&
-            my_is_char_in_str(str[i + 1], delimiter) == -1)
+            my_is_char_in_str(str[i + 1], delimiter) == -1 &&
+            str[i + 1])
             count++;
     return count;
 }
