@@ -39,7 +39,8 @@ char **my_str_to_word_array(char *str, char *delimiter)
     array[0] = my_strndup(str, word_len);
     for (int i = word_len; str[i]; i++)
         if (my_is_char_in_str(str[i], delimiter) != -1 &&
-            my_is_char_in_str(str[i + 1], delimiter) == -1) {
+            my_is_char_in_str(str[i + 1], delimiter) == -1
+            str[i + 1]) {
             word_len = get_word_len(str + i + 1, delimiter);
             array[word_idx] = my_strndup(str + i + 1, word_len);
             i += word_len;
