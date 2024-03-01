@@ -37,7 +37,7 @@ char **my_str_to_word_array(char *str, char *delimiter)
     char **array = malloc(sizeof(char *) * (nb_word + 1));
 
     array[0] = my_strndup(str, word_len);
-    for (int i = word_len; str[i]; i++)
+    for (int i = word_len; str[i] && nb_word > 1; i++)
         if (my_is_char_in_str(str[i], delimiter) != -1 &&
             my_is_char_in_str(str[i + 1], delimiter) == -1 &&
             str[i + 1]) {
