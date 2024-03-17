@@ -29,10 +29,12 @@ NAME =		libll.a
 
 HEADER =	ll.h
 
-all: 		compil copy_lib copy_h
+all: 		$(NAME)
 
-compil:		$(OBJS)
+$(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
+	make copy_lib
+	make copy_h
 
 copy_lib:
 	cp $(NAME) ../

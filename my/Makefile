@@ -40,6 +40,8 @@ SRCS =	printing_functions/my_putchar.c			\
 		maths_functions/my_base_to_int.c	\
 		\
 		freeing_functions/my_free_word_array.c	\
+		\
+		misc/arrlen.c
 
 OBJS =		$(SRCS:.c=.o)
 
@@ -49,10 +51,12 @@ HEADER =	my.h
 
 HEADERS =	my_headers/
 
-all: 		compil copy_lib copy_h
+all: 		$(NAME)
 
-compil:		$(OBJS)
+$(NAME):	$(OBJS)
 	ar rc $(NAME) $(OBJS)
+	make copy_lib
+	make copy_h
 
 copy_lib:
 	cp $(NAME) ../

@@ -5,6 +5,9 @@
 ## Makefile
 ##
 
+.PHONY: makelibs
+
+
 LIBMY =	my/printing_functions/my_putchar.c			\
 		my/printing_functions/my_putstr.c			\
 		my/printing_functions/my_putint.c			\
@@ -101,18 +104,24 @@ NAME = 		libtest
 
 export CFLAGS= 	-g -Wall -Wextra
 
-LIBS =		\
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	gcc $(CFLAGS) -o $(NAME) $(OBJS) -L. $(LIBS)
+	gcc $(CFLAGS) -o $(NAME) $(OBJS)
 
-makelibs:
-	make -C my/
-	make -C linked_list/
-	make -C json_parser/
-	make -C file_manipulation/
+makelibs: libmy.a libll.a libfman.a
+
+libmy.a: my
+	make -C $?
+
+libll.a: linked_list
+	make -C $?
+
+libfman.a: file_manipulation
+	make -C $?
+
+libjpar.a: json_parser
+	make -C $?
 
 fcleanlibs:
 	make fclean -C my/
