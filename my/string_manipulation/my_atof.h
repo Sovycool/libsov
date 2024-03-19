@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** libsov
+** LibSov
 ** File description:
 ** my_atof
 */

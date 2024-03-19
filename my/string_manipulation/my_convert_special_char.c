@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** libmy
+** LibSov
 ** File description:
 ** my_convert_special_char
 */

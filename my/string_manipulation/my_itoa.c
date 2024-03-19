@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2024
-** libmy
+** LibSov
 ** File description:
 ** my_itoa
 */

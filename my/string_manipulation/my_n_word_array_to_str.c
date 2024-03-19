@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** libmy
+** LibSov
 ** File description:
 ** my_n_word_array_to_str
 */
