@@ -99,12 +99,8 @@ HEADERS =	json_headers/
 all: 		$(NAME)
 
 $(NAME):	$(OBJS)
-	ar rc $(NAME) $(OBJS)
-	make copy_lib
+	ar rc ../$(NAME) $(OBJS)
 	make copy_h
-
-copy_lib:
-	cp $(NAME) ../
 
 copy_h:
 	mkdir -p ../../include
@@ -115,7 +111,6 @@ clean:
 	rm -f $(OBJS)
 
 fclean: 	clean
-	rm -f $(NAME)
 	rm -f ../$(NAME)
 	rm -f ../../include/$(HEADER)
 	rm -rf ../../include/$(HEADERS)

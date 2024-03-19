@@ -7,7 +7,6 @@
 
 .PHONY: makelibs
 
-
 LIBMY =	my/printing_functions/my_putchar.c			\
 		my/printing_functions/my_putstr.c			\
 		my/printing_functions/my_putint.c			\
@@ -109,7 +108,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	gcc $(CFLAGS) -o $(NAME) $(OBJS)
 
-makelibs: libmy.a libll.a libfman.a
+makelibs: libmy.a libll.a libfman.a libjpar.a
 
 libmy.a: my
 	make -C $?

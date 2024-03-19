@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2023
-** libmy
+** LibSov
 ** File description:
 ** my
 */
@@ -13,5 +13,6 @@
     #include "my_headers/string_manipulation.h"
     #include "my_headers/maths_functions.h"
     #include "my_headers/freeing_functions.h"
+    #include "my_headers/misc.h"
 
 #endif

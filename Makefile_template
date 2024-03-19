@@ -1,0 +1,40 @@
+##
+## EPITECH PROJECT, 2023
+## LibSov
+## File description:
+## Makefile
+##
+
+.PHONY: all fcleanlib clean fclean re
+
+SRCS =		main.c
+
+OBJS =		$(SRCS:.c=.o)
+
+NAME = 		a.out
+
+CFLAGS += 	-g -Wall -Wextra
+
+LIBS =		lib/libmy.a		\
+			lib/libll.a		\
+			lib/libjpar.a	\
+			lib/libfman.a	\
+
+all: $(NAME)
+
+$(LIBS): lib/my
+	make makelibs -C lib/
+
+fcleanlib:
+	make fcleanlibs -C lib/
+
+$(NAME): $(LIBS) $(OBJS)
+	gcc $(FLAGS) -o $(NAME) $(SRCS) -L. $(LIBS)
+
+clean:
+	rm -f $(OBJS)
+
+fclean:	clean fcleanlib
+	rm -f $(NAME)
+
+re:		fclean all
