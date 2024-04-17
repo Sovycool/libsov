@@ -15,7 +15,7 @@
 */
 int my_putchar(char c);
 /*!
-** @brief Prints the given string `str`.
+** @brief Prints the given string `str`. Prints (NULL) if `str` is `NULL`
 ** @param str The string you want to print.
 ** @return The number of character printed.
 */

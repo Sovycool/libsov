@@ -8,11 +8,11 @@
 #include "../my.h"
 #include <stdlib.h>
 
-static char int_to_char(int nb)
+static char int_to_char(int i)
 {
-    if (nb < 10)
-        return '0' + nb;
-    return 'A' + (nb - 10);
+    char *int_as_chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    return int_as_chars[i];
 }
 
 static int output_len(int nb, int base)
@@ -31,6 +31,14 @@ char *my_int_to_base(int nb, int base)
     int len = output_len(nb, base);
     char *output = malloc(sizeof(char) * (len + 1));
 
+    if (nb < 0)
+        return NULL;
+    len = output_len(nb, base);
+    output = malloc(sizeof(char) * (len + 1));
+    if (!output)
+        return NULL;
+    if (base > 36 || base < 2)
+        return NULL;
     for (int i = 0; i < len; i++) {
         output[i] = int_to_char(nb % base);
         nb /= base;

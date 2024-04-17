@@ -65,6 +65,8 @@ int my_printf(char *str, ...)
     va_list args;
     flag_t *flag = NULL;
 
+    if (!str)
+        return my_putstr("(NULL)\n");
     va_start(args, str);
     for (int i = 0; str[i]; i++) {
         if (str[i] == '%') {

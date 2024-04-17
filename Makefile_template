@@ -22,7 +22,7 @@ LIBS =		lib/libmy.a		\
 
 all: $(NAME)
 
-$(LIBS): lib/my
+$(LIBS):
 	make makelibs -C lib/
 
 fcleanlib:

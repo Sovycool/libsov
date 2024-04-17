@@ -12,6 +12,8 @@ int my_are_chars_in_str(char const *chars, char const *str)
     int index;
     int output = -1;
 
+    if (!chars || !str)
+        return -1;
     for (int i = 0; chars[i]; i++) {
         index = my_is_char_in_str(chars[i], str);
         if (index != -1)

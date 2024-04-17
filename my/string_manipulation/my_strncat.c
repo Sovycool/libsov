@@ -14,6 +14,12 @@ char *my_strncat(char *a, char *b, int n, int m)
     int len_a = my_strlen(a);
     int len_b = my_strlen(b);
 
+    if (!a || !b)
+        return NULL;
+    if (!a)
+        return my_strdup(b);
+    if (!b)
+        return my_strdup(a);
     len_a = (len_a < n || n < 0 ? len_a : n);
     len_b = (len_b < m || m < 0 ? len_b : m);
     output = malloc(sizeof(char) * ((len_a + len_b) + 1));

@@ -13,6 +13,8 @@ char *my_word_array_to_str(char **array, char *delimiter)
     char *output = my_strdup(array[0]);
     char *tmp_ptr;
 
+    if (!array)
+        return NULL;
     if (array[1]) {
         tmp_ptr = output;
         output = my_strcat(output, delimiter);
