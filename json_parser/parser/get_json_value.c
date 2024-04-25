@@ -40,6 +40,7 @@ void get_json_value(char **file, json_value_t **value, json_value_type_t *type)
     if ((*file)[0] == '[') {
         *type = JSON_ARRAY;
         (*value)->json_array = get_json_array(file);
+        (*file)++;
         return;
     }
     get_json_numerical_value(file, value, type);
