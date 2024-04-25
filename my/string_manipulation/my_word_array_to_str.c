@@ -10,25 +10,19 @@
 
 char *my_word_array_to_str(char **array, char *delimiter)
 {
-    char *output = my_strdup(array[0]);
-    char *tmp_ptr;
+    char *output = NULL;
+    char *tmp_ptr = NULL;
 
-    if (!array)
+    if (!array || !delimiter)
         return NULL;
-    if (array[1]) {
+    output = my_strdup(array[0]);
+    for (int i = 1; array[i]; i++) {
         tmp_ptr = output;
         output = my_strcat(output, delimiter);
         free(tmp_ptr);
-    }
-    for (int i = 1; array[i]; i++) {
         tmp_ptr = output;
         output = my_strcat(output, array[i]);
         free(tmp_ptr);
-        if (array[i + 1]) {
-            tmp_ptr = output;
-            output = my_strcat(output, delimiter);
-            free(tmp_ptr);
-        }
     }
     return output;
 }
