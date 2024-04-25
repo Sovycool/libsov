@@ -1,42 +1,23 @@
 /*
-** EPITECH PROJECT, 2023
-** json_parser
+** EPITECH PROJECT, 2024
+** Libsov
 ** File description:
 ** jpar
 */
 
-#ifndef JPAR_H_
-    #define JPAR_H_
+#ifndef JPARSER_H_
+    #define JPARSER_H_
 
-    #include "json_headers/json_types.h"
-    #include "json_headers/json_object.h"
-    #include "json_headers/json_pair.h"
-    #include "json_headers/json_value.h"
-    #include "json_headers/json_array.h"
+    #include "json_headers/json_struct.h"
 
-json_object_t *new_json(void);
-void destroy_json(json_object_t *json);
-void display_json(json_object_t *json);
-json_object_t *extract_json(char *str);
-/*!
-** @brief Add a new pair key/value to a json object.
-** If key already exists and is of ARRAY type, adds value to ARRAY.
-** Else, fails if key already exists in object.
-** @param json Pointer to json object.
-** @param key key of the key/value pair.
-** @param value Pointer to value.
-** @param type Type of value.
-** @return Returns 1 on sucess, 0 on fail.
-*/
-int add_to_json(
-    json_object_t *json, char *key, void *value, json_value_type_t type);
-/*!
-** @brief Find a json value associated to a given key.
-** Fails if key is not found.
-** @param json Pointer to json object.
-** @param key Key to find.
-** @return Returns `void *` pointing on value on sucess, NULL on fail.
-*/
-void *get_json_value(json_object_t *json, char *key);
+    #include "json_headers/destroy.h"
+    #include "json_headers/finder.h"
+    #include "json_headers/misc.h"
+    #include "json_headers/parser.h"
+
+    #include <stdlib.h>
+    #include <fcntl.h>
+    #include <unistd.h>
+    #include <sys/stat.h>
 
 #endif /* !JPAR_H_ */

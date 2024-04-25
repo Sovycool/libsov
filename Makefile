@@ -24,5 +24,5 @@ libjpar.a: json_parser
 fcleanlibs:
 	make fclean -C my/
 	make fclean -C linked_list/
-	make fclean -C json_parser/
 	make fclean -C file_manipulation/
+	make fclean -C json_parser/
