@@ -21,6 +21,11 @@ SRCS =	misc/string_cleaner.c	\
 		parser/get_json_array.c		\
 		\
 		finder/json_finder.c		\
+		finder/json_object_finder.c	\
+		finder/json_array_finder.c	\
+		finder/json_string_finder.c	\
+		finder/json_float_finder.c	\
+		finder/json_int_finder.c	\
 
 EXTERN_SRCS =	../file_manipulation/fman_get_file.c	\
 				\

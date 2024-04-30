@@ -18,14 +18,13 @@ static json_object_t *json_find_object(json_object_t *object, char *value_name)
 
 json_object_t *json_finder(json_object_t *json, char *filepath)
 {
-    char **path = NULL;
+    char **path = my_str_to_word_array(filepath, "/");
     char *shorten_path = NULL;
     json_object_t *json_object;
     json_object_t *output;
 
     if (!json || !filepath)
         return NULL;
-    path = my_str_to_word_array(filepath, "/");
     if (my_arrlen((void **)path) == 1) {
         output = json_find_object(json, path[0]);
         my_free_word_array(path);
