@@ -15,5 +15,7 @@ json_array_t *get_json_array(char **file)
     get_json_value(file, &array->value, &array->type);
     if ((*file)[0] == ',')
         array->next = get_json_array(file);
+    else
+        (*file)++;
     return array;
 }
