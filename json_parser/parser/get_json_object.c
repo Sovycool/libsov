@@ -17,5 +17,6 @@ json_object_t *get_json_object(char **file)
     get_json_value(file, &object->value, &object->type);
     if ((*file)[0] == ',')
         object->next = get_json_object(file);
+    (*file)++;
     return object;
 }
