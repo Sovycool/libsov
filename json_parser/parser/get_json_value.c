@@ -13,15 +13,15 @@ static void get_json_numerical_value(
 {
     int i = 0;
 
-    for (; my_is_char_in_str((*file)[i], "0123456789") != -1; i++);
+    for (; my_is_char_in_str((*file)[i], "-0123456789") != -1; i++);
     if ((*file)[i] == '.') {
         *type = JSON_FLOAT;
         (*value)->json_float = my_atof((*file));
-        for (; my_is_char_in_str((*file)[0], ".0123456789") != -1; (*file)++);
+        for (; my_is_char_in_str((*file)[0], "-.0123456789") != -1; (*file)++);
     } else {
         *type = JSON_INT;
         (*value)->json_int = my_atoi((*file));
-        for (; my_is_char_in_str((*file)[0], "0123456789") != -1; (*file)++);
+        for (; my_is_char_in_str((*file)[0], "-0123456789") != -1; (*file)++);
     }
 }
 

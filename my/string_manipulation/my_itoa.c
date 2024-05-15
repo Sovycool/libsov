@@ -9,5 +9,9 @@
 
 char *my_itoa(int nb)
 {
-    return my_int_to_base(nb, 10);
+    char *integer = my_int_to_base(my_abs(nb), 10);
+    char *output = my_strcat("-", integer);
+
+    free(integer);
+    return output;
 }
