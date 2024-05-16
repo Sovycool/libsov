@@ -41,5 +41,12 @@ char *my_int_to_base(int nb, int base);
  characters.
 */
 int my_base_to_int(char *nb, int base);
+/*!
+** @brief Returns the point at `t` on the `ab` vector.
+** @param a First point of the vector.
+** @param b Second point of the vector.
+** @param t The point on the vector.
+*/
+double my_lerp(double a, double b, double t);
 
 #endif /* !MATHS_FUNCTIONS_H_ */
