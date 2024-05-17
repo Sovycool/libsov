@@ -39,6 +39,8 @@ SRCS =	printing_functions/my_putchar.c			\
 		maths_functions/my_int_to_base.c	\
 		maths_functions/my_base_to_int.c	\
 		maths_functions/my_lerp.c			\
+		maths_functions/my_min.c			\
+		maths_functions/my_max.c			\
 		\
 		freeing_functions/my_free_word_array.c	\
 		\

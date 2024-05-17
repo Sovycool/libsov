@@ -48,5 +48,7 @@ int my_base_to_int(char *nb, int base);
 ** @param t The point on the vector.
 */
 double my_lerp(double a, double b, double t);
+double my_min(double a, double b);
+double my_max(double a, double b);
 
 #endif /* !MATHS_FUNCTIONS_H_ */
