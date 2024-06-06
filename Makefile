@@ -21,6 +21,12 @@ libfman.a: file_manipulation
 libjpar.a: json_parser
 	make -C $?
 
+cleanlibs:
+	make clean -C my/
+	make clean -C linked_list/
+	make clean -C file_manipulation/
+	make clean -C json_parser/
+
 fcleanlibs:
 	make fclean -C my/
 	make fclean -C linked_list/

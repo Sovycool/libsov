@@ -25,13 +25,16 @@ all: $(NAME)
 $(LIBS):
 	make makelibs -C lib/
 
+cleanlib:
+	make cleanlibs -C lib/
+
 fcleanlib:
 	make fcleanlibs -C lib/
 
 $(NAME): $(LIBS) $(OBJS)
 	gcc $(FLAGS) -o $(NAME) $(SRCS) -L. $(LIBS)
 
-clean:
+clean: cleanlib
 	rm -f $(OBJS)
 
 fclean:	clean fcleanlib
