@@ -8,6 +8,10 @@
 #ifndef MY_H
     #define MY_H
 
+    #include <stdlib.h>
+    #include <stdarg.h>
+    #include <unistd.h>
+
     #include "my_headers/printing_functions.h"
     #include "my_headers/string_control.h"
     #include "my_headers/string_manipulation.h"

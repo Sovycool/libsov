@@ -6,7 +6,6 @@
 */
 
 #include "../my.h"
-#include <stdlib.h>
 
 int my_atoi(char *str)
 {

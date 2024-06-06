@@ -6,7 +6,6 @@
 */
 
 #include "../my.h"
-#include <stdlib.h>
 
 static int char_to_int(char c)
 {

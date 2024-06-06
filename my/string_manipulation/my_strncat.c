@@ -6,7 +6,6 @@
 */
 
 #include "../my.h"
-#include <stdlib.h>
 
 char *my_strncat(char *a, char *b, int n, int m)
 {

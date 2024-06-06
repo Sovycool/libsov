@@ -6,7 +6,6 @@
 */
 
 #include "../my.h"
-#include <stdlib.h>
 
 int my_show_word_array(char *const *tab, char const *delimiter)
 {

@@ -6,7 +6,6 @@
 */
 
 #include "../my.h"
-#include <stdlib.h>
 
 static int count_word(char *str, char *delimiter)
 {

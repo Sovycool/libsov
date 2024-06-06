@@ -6,7 +6,6 @@
 */
 
 #include "../my.h"
-#include <stdlib.h>
 
 char *my_n_word_array_to_str(char **array, char *delimiter, int n)
 {

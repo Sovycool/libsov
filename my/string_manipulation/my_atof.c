@@ -7,7 +7,6 @@
 
 #include "../my.h"
 #include "my_atof.h"
-#include <stdlib.h>
 
 static int count_digits(char *str)
 {

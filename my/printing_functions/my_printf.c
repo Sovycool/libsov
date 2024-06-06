@@ -7,8 +7,6 @@
 
 #include "../my.h"
 #include "my_printf.h"
-#include <stdlib.h>
-#include <stdarg.h>
 
 static flag_t *reset_flag(flag_t *flag)
 {

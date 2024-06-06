@@ -5,7 +5,7 @@
 ** free_word_array
 */
 
-#include <stdlib.h>
+#include "../my.h"
 
 void my_free_word_array(char **array)
 {
