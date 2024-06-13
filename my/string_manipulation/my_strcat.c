@@ -13,7 +13,7 @@ char *my_strcat(char *a, char *b)
     int len_a = my_strlen(a);
     int len_b = my_strlen(b);
 
-    if (!a || !b)
+    if (!a && !b)
         return NULL;
     if (!a)
         return my_strdup(b);
