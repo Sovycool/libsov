@@ -20,7 +20,7 @@ int my_is_str_in_str(char const *sequence, char const *str)
         if (str[index + i] == 0)
             return -1;
         if (sequence[i] != str[index + i])
-            return my_is_str_in_str(sequence, str + (index + i));
+            return my_is_str_in_str(sequence, str + (index + i)) + index + i;
     }
     return index;
 }
